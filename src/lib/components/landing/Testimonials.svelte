@@ -3,7 +3,7 @@
 </script>
 
 <section>
-	<div class="mx-auto max-w-2xl px-8 py-12 pb-4 md:px-12">
+	<div class="py-12 pb-4">
 		<div class="relative overflow-hidden">
 			<div class="container flex flex-col justify-center overflow-hidden md:flex-row">
 				<div>

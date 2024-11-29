@@ -8,12 +8,16 @@
 </script>
 
 <section class="scroll-mt-4" id="pricing">
-	<div class="mx-auto max-w-7xl px-8 py-12 md:px-12">
-		<div class="grid grid-cols-1 gap-px md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-			<IntroBlock />
+	<div class="py-12">
+		<IntroBlock />
+
+		<div class="grid w-full grid-cols-1 gap-1 py-1 md:grid-cols-2 lg:grid-cols-3">
 			<FirstOption />
 			<SecondOption />
 			<ThirdOption />
+		</div>
+
+		<div class="grid-flow-col-1 grid w-full gap-1 sm:grid-cols-2">
 			<GoodToKnow />
 			<BookACall />
 		</div>

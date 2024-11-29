@@ -1,5 +1,5 @@
 <section
-	class="col-span-full h-full justify-between rounded-3xl bg-white p-8 lg:col-span-1 xl:col-span-2"
+	class="h-full justify-between rounded-3xl bg-white p-8 lg:col-span-1"
 >
 	<div class="flex h-full flex-col justify-between">
 		<div>

@@ -37,13 +37,12 @@
 		</p>
 	</div>
 	<div>
-		<div class="flex items-center gap-2 text-black">
+		<!-- <div class="mt-2 flex items-center gap-2 text-black">
 			<p class="text-xs">10 posti rimanenti</p>
 			<div class="h-2 w-2 rounded-full bg-black"></div>
-
 			<div class="h-2 w-2 rounded-full border border-black"></div>
-		</div>
-		<div class="mt-4 flex flex-col border-t border-zinc-200 pt-4">
+		</div> -->
+		<div class="mt-4 flex flex-col pt-1">
 			<span class="text-xs font-normal text-zinc-500">
 				Per maggiori info scrivimi su <span class="font-medium italic text-black">insta</span>,
 				oppure contattami attraverso il

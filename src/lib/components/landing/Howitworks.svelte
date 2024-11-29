@@ -1,5 +1,5 @@
 <section class="scroll-mt-12" id="how">
-	<div class="mx-auto max-w-2xl px-8 py-12 md:px-12">
+	<div class="py-12">
 		<div>
 			<h2 class="text-2xl font-light tracking-tighter text-black lg:text-4xl">Come funziona</h2>
 		</div>
