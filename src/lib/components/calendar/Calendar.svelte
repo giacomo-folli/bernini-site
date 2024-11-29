@@ -54,7 +54,8 @@
 <div class="rounded-3xl bg-white p-4 ring-1 ring-zinc-200 sm:p-8">
 	<div class="flex items-center justify-between">
 		<h2 class="text-lg font-medium text-black">
-			{monthNames[selectedMonth]} {selectedYear}
+			{monthNames[selectedMonth]}
+			{selectedYear}
 		</h2>
 		<div class="flex gap-2">
 			<button
@@ -92,12 +93,12 @@
 
 	<div class="mt-6 grid grid-cols-7 text-center text-xs font-medium text-zinc-500">
 		<div class="hidden sm:block">Domenica</div>
-		<div>Lunedì</div>
-		<div>Martedì</div>
-		<div>Mercoledì</div>
-		<div>Giovedì</div>
-		<div>Venerdì</div>
-		<div>Sabato</div>
+		<div class="hidden sm:block">Lunedì</div>
+		<div class="hidden sm:block">Martedì</div>
+		<div class="hidden sm:block">Mercoledì</div>
+		<div class="hidden sm:block">Giovedì</div>
+		<div class="hidden sm:block">Venerdì</div>
+		<div class="hidden sm:block">Sabato</div>
 		<div class="sm:hidden">D</div>
 		<div class="sm:hidden">L</div>
 		<div class="sm:hidden">M</div>
@@ -112,7 +113,7 @@
 		style="grid-template-rows: repeat(auto-fill, minmax(2.5rem, 1fr));"
 	>
 		{#each previousDays as _}
-			<div class="relative py-2 px-1 sm:py-3" />
+			<div class="relative px-1 py-2 sm:py-3" />
 		{/each}
 
 		{#each days as day}
