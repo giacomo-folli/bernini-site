@@ -62,15 +62,12 @@
 						<li>
 							<a href="#faq" class="shrink-0 hover:text-black"> Faq</a>
 						</li>
-						<li>
-							<a href="/calendario" class="shrink-0 hover:text-black"> Calendario</a>
-						</li>
 						<li class="shrink-0">
 							<a
-								href="/calendario/break-dance-principianti"
+								href="https://github.com/giacomo-folli"
 								class="inline-flex h-8 w-auto items-center justify-center rounded-full border-2 border-black bg-black px-4 py-2 text-white ring-2 ring-transparent duration-200 hover:bg-transparent hover:text-black focus:ring-2 focus:ring-black focus:ring-offset-2"
 							>
-								Prenota Ora</a
+								Scrivimi</a
 							>
 						</li>
 					</ul>
