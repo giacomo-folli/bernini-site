@@ -9,12 +9,14 @@
 	import Testimonials from '$lib/components/landing/Testimonials.svelte';
 </script>
 
-<Hero />
-<LogoCloud />
-<!-- <Work /> -->
-<Howitworks />
-<AllScope />
-<Testimonials />
-<Pricing />
-<Faq />
-<Cta />
+<div class="mx-auto max-w-2xl px-4 sm:px-6 md:px-12 lg:px-8">
+	<Hero />
+	<LogoCloud />
+	<!-- <Work /> -->
+	<Howitworks />
+	<AllScope />
+	<Testimonials />
+	<Pricing />
+	<Faq />
+	<Cta />
+</div>

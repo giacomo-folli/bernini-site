@@ -1,5 +1,5 @@
 <section>
-	<div class="mx-auto max-w-2xl px-8 py-12 md:px-12">
+	<div class="py-12">
 		<div class="h-full overflow-hidden rounded-3xl bg-black p-8 text-center">
 			<h2 class="text-3xl font-normal tracking-tighter text-white md:text-4xl">
 				Inizia la tua trasformazione ora

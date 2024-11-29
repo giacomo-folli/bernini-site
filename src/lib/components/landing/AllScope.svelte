@@ -4,7 +4,7 @@
 </script>
 
 <section class="scroll-mt-24" id="services">
-	<div class="mx-auto max-w-2xl px-8 py-12 md:px-12">
+	<div class="py-12">
 		<div
 			class="rounded-4xl col-span-full inline-flex h-full w-full items-center text-black lg:col-span-2"
 		>

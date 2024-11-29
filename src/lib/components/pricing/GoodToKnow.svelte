@@ -1,5 +1,5 @@
 <section
-	class="order-last col-span-full flex h-full flex-col justify-between rounded-3xl bg-white p-8 md:order-none md:col-span-1 xl:col-span-2"
+	class="order-last flex h-full flex-col justify-between rounded-3xl bg-white p-8 md:order-none md:col-span-1"
 >
 	<p class="text-lg text-black lg:text-xl">Classi passate</p>
 	<div class="mt-4">

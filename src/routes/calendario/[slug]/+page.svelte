@@ -15,8 +15,8 @@
 	/>
 </svelte:head>
 
-<div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-	<nav class="flex mb-8" aria-label="Breadcrumb">
+<div class="mx-auto max-w-6xl px-4 py-24 md:px-12 lg:mt-8 sm:px-6 lg:px-8">
+	<nav class="flex mb-2" aria-label="Breadcrumb">
 		<ol class="flex items-center space-x-2 text-sm text-zinc-500">
 			<li>
 				<a href="/" class="hover:text-black">Home</a>
@@ -33,7 +33,7 @@
 	</nav>
 
 	<div class="mx-auto max-w-2xl lg:max-w-none">
-		<h1 class="text-3xl font-light tracking-tight text-black sm:text-4xl">
+		<h1 class="text-3xl font-normal tracking-tighter text-black sm:text-4xl">
 			Break Dance - Livello Principianti
 		</h1>
 		<p class="mt-2 text-lg text-zinc-600">Con Francesco Bernini | 1 Dicembre 2024, 18:00</p>
@@ -72,7 +72,7 @@
 				<TestimonialCarousel />
 			</div>
 
-			<div class="lg:sticky lg:top-8 lg:h-fit">
+			<div class="lg:sticky lg:top-24 lg:h-fit">
 				<div class="rounded-3xl bg-white p-8 ring-1 ring-zinc-200">
 					<h2 class="text-lg font-medium text-black">Prenota la tua sessione</h2>
 					<p class="mt-2 text-sm text-zinc-600">

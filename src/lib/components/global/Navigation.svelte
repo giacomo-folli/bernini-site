@@ -1,5 +1,13 @@
 <script lang="ts">
 	let open = false;
+
+	const hrefs = [
+		// { url: '#work', title: 'Foto' },
+		{ url: '#how', title: 'Come funziona' },
+		{ url: '#pricing', title: 'Servizi' },
+		// { url: '#faq', title: 'Faq' },
+		{ url: '/calendario', title: 'Calendario' }
+	];
 </script>
 
 <div class="fixed inset-x-0 top-4 z-50">
@@ -50,24 +58,15 @@
 					<ul
 						class="list-none items-center justify-center gap-4 space-y-2 text-center text-xs text-zinc-500 md:ml-auto md:inline-flex md:space-y-0 md:text-left"
 					>
-						<li>
-							<a href="#work" class="shrink-0 hover:text-black"> Foto</a>
-						</li>
-						<li>
-							<a href="#how" class="shrink-0 hover:text-black"> Come funziona</a>
-						</li>
-						<li>
-							<a href="#pricing" class="shrink-0 hover:text-black"> Servizi</a>
-						</li>
-						<li>
-							<a href="#faq" class="shrink-0 hover:text-black"> Faq</a>
-						</li>
-						<li>
-							<a href="/calendario" class="shrink-0 hover:text-black"> Calendario</a>
-						</li>
+						{#each hrefs as item}
+							<li>
+								<a href={item.url} class="shrink-0 hover:text-black">{item.title}</a>
+							</li>
+						{/each}
+
 						<li class="shrink-0">
 							<a
-								href="/calendario/break-dance-principianti"
+								href="#pricing"
 								class="inline-flex h-8 w-auto items-center justify-center rounded-full border-2 border-black bg-black px-4 py-2 text-white ring-2 ring-transparent duration-200 hover:bg-transparent hover:text-black focus:ring-2 focus:ring-black focus:ring-offset-2"
 							>
 								Prenota Ora</a

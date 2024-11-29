@@ -1,5 +1,5 @@
 <section>
-	<div class="mx-auto max-w-2xl px-8 md:px-12">
+	<div>
 		<div class="grid grid-cols-2 gap-px overflow-hidden rounded-3xl sm:mx-0">
 			<div class="flex items-center bg-white p-8 sm:p-10">
 				<img
