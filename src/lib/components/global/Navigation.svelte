@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { onNavigate } from '$app/navigation';
+
 	let open = false;
 
 	const hrefs = [
@@ -8,13 +10,17 @@
 		// { url: '#faq', title: 'Faq' },
 		{ url: '/calendario', title: 'Calendario' }
 	];
+
+	onNavigate(() => {
+		open = false;
+	});
 </script>
 
-<div class="fixed inset-x-0 top-4 z-50">
-	<div class="mx-auto max-w-2xl px-8">
+<div class="fixed inset-x-0 z-50 sm:top-4">
+	<div class="sm:mx-auto sm:max-w-2xl sm:px-4">
 		<div class="mx-auto w-full">
 			<div
-				class="relative mx-auto flex w-full flex-col rounded-xl bg-white p-3 uppercase ring-1 ring-zinc-200 backdrop-blur-xl backdrop-filter md:flex-row md:items-center md:justify-between md:rounded-full"
+				class="relative mx-auto flex w-full flex-col rounded-b-xl bg-white p-3 uppercase shadow-md ring-1 ring-zinc-200 backdrop-blur-xl backdrop-filter sm:rounded-xl sm:shadow-sm md:flex-row md:items-center md:justify-between md:rounded-full"
 			>
 				<div class="flex flex-row items-center justify-between md:justify-start">
 					<a
@@ -56,18 +62,20 @@
 						: 'hidden'}"
 				>
 					<ul
-						class="list-none items-center justify-center gap-4 space-y-2 text-center text-xs text-zinc-500 md:ml-auto md:inline-flex md:space-y-0 md:text-left"
+						class="text-md list-none items-center justify-center gap-4 space-y-2 px-2 text-left text-zinc-500 sm:text-center sm:text-xs md:ml-auto md:inline-flex md:space-y-0 md:text-left"
 					>
 						{#each hrefs as item}
 							<li>
-								<a href={item.url} class="shrink-0 hover:text-black">{item.title}</a>
+								<a on:click={() => (open = false)} href={item.url} class="shrink-0 hover:text-black"
+									>{item.title}</a
+								>
 							</li>
 						{/each}
 
-						<li class="shrink-0">
+						<li class="shrink-0 pt-8 sm:pt-0">
 							<a
 								href="#pricing"
-								class="inline-flex h-8 w-auto items-center justify-center rounded-full border-2 border-black bg-black px-4 py-2 text-white ring-2 ring-transparent duration-200 hover:bg-transparent hover:text-black focus:ring-2 focus:ring-black focus:ring-offset-2"
+								class="inline-flex h-8 w-auto items-center justify-center rounded-full border-2 border-black bg-black px-6 py-4 text-white ring-2 ring-transparent duration-200 hover:bg-transparent hover:text-black focus:ring-2 focus:ring-black focus:ring-offset-2 sm:px-4 sm:py-2"
 							>
 								Prenota Ora</a
 							>
