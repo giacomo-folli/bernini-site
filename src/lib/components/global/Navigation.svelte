@@ -6,7 +6,7 @@
 	const hrefs = [
 		// { url: '#work', title: 'Foto' },
 		{ url: '#how', title: 'Come funziona' },
-		{ url: '#pricing', title: 'Servizi' },
+		{ url: '/chi-sono', title: 'About' },
 		// { url: '#faq', title: 'Faq' },
 		{ url: '/calendario', title: 'Calendario' }
 	];
@@ -72,14 +72,14 @@
 							</li>
 						{/each}
 
-						<li class="shrink-0 pt-8 sm:pt-0">
+						<!-- <li class="shrink-0 pt-8 sm:pt-0">
 							<a
 								href="#pricing"
 								class="inline-flex h-8 w-auto items-center justify-center rounded-full border-2 border-black bg-black px-6 py-4 text-white ring-2 ring-transparent duration-200 hover:bg-transparent hover:text-black focus:ring-2 focus:ring-black focus:ring-offset-2 sm:px-4 sm:py-2"
 							>
 								Prenota Ora</a
 							>
-						</li>
+						</li> -->
 					</ul>
 				</nav>
 			</div>
