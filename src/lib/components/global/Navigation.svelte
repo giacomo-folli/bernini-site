@@ -4,10 +4,8 @@
 	let open = false;
 
 	const hrefs = [
-		// { url: '#work', title: 'Foto' },
-		{ url: '#how', title: 'Come funziona' },
-		{ url: '/chi-sono', title: 'About' },
-		// { url: '#faq', title: 'Faq' },
+		{ url: '/come-funziona', title: 'Classi' },
+		{ url: '/chi-sono', title: 'La mia storia' },
 		{ url: '/calendario', title: 'Calendario' }
 	];
 

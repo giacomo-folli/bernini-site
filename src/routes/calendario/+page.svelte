@@ -28,8 +28,8 @@
 </svelte:head>
 
 <div class="mx-auto max-w-2xl px-4 py-24 sm:px-6 md:px-12 lg:px-8">
-	<SpotsCounter />
-	<div class="mx-auto mt-12 max-w-3xl">
+	<SpotsCounter text="Controlla i giorni degli allenamenti" />
+	<div class="mx-auto mt-6 max-w-3xl">
 		<h1 class="text-3xl font-normal tracking-tighter text-black sm:text-4xl">
 			Calendario Allenamenti
 		</h1>

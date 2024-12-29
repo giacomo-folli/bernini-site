@@ -1,40 +1,34 @@
-<section class="scroll-mt-12" id="how">
-	<div class="py-12">
-		<div>
-			<h2 class="text-2xl font-light tracking-tighter text-black lg:text-4xl">Come funziona</h2>
-		</div>
-		<div class="mt-8 flex flex-col gap-2 text-pretty text-sm text-zinc-500">
-			<p>
-				Nell’ultimo decennio mi sono dedicato allo studio del movimento umano, imparando da maestri
-				come Wil Brown, Nil tiesner, Harry Williams, Flynn Disney e Stefan Crainic. Ho approfondito
-				pratiche fisiche molto differenti come verticalismo, acrobatica, forza e flessibilità a
-				corpo libero, parkour, e pratiche più interne e mentali come la respirazione, con gli studi
-				di Oxigen advantage, e relazione tra emozioni e movimento, grazie alla partecipazione
-				all’Anxiety Study, diretto da Flynn Disney. Queste competenze rendono il mio, un approccio
-				che -utilizza il movimento come mezzo, utile per lo sviluppo di capacità fisiche e per la
-				scoperta del nostro mondo interno- o -rivolge la sua attenzione tanto allo sviluppo motorio,
-				quanto alla cura e alla scoperta del nostro mondo interno-
-			</p>
+<script>
+	import SpotsCounter from '../global/SpotsCounter.svelte';
+</script>
 
-			<!-- Il mio metodo di allenamento è
-				basato su un approccio personalizzato e multidisciplinare. Iniziamo con una <span
-					class="font-semibold"
-					>valutazione
-				</span>
-				approfondita dei tuoi
-				<span class="font-semibold"> obiettivi </span>, livello di fitness attuale e preferenze
-				personali. -->
-			<!-- <p>
-				Sulla base di questa <span class="font-semibold"> analisi</span>, creiamo insieme un
-				programma di allenamento su misura che integra diverse discipline come primal movement,
-				calisthenics, yoga, break dance e parkour.
-			</p>
-			<p>
-				Ogni sessione è progettata per sfidare il tuo corpo in modi
-				<span class="font-semibold"> nuovi </span> e
-				<span class="font-semibold"> stimolanti</span>, promuovendo un miglioramento olistico della
-				forza, flessibilità, equilibrio e consapevolezza corporea.
-			</p> -->
+<div class="mb-4 mt-14 lg:mt-24">
+	<section class="scroll-mt-12" id="how">
+		<div>
+			<div>
+				<div class="hidden sm:block">
+					<SpotsCounter text="Scopri come iniziare ad allenarti con me" />
+				</div>
+				<h1 class="mt-3 text-3xl font-normal tracking-tighter text-black sm:mt-6 sm:text-4xl">
+					Come funziona
+				</h1>
+			</div>
+
+			<div class="mt-4 flex flex-col gap-2 text-pretty text-sm text-zinc-500">
+				<p>
+					Che si scelga di allenarsi con me on line o di persona, verrà sempre richiesto di
+					compilare un questionario, che mi aiuti a capire lo stato fisico del cliente, il tempo a
+					disposizione, gli obbiettivi, e altre informazioni importanti per poter creare un
+					programma su misura. Nel caso si scelga l’online coaching, ogni programma avrà una durata
+					di 6 settimane, e durante la settima settimana che verrà presa di scarico, verrà
+					strutturata la nuova fase di allenamento. In tutti i casi il percorso che propongo è
+					adatto solamente a chi è davvero disposto a impegnare il proprio tempo e le proprie
+					energie per lavorare sul proprio miglioramento - per questo accetto pochi studenti, e
+					voglio essere profondamente coinvolto nel processo di ognuno di loro. Questo non significa
+					che sia richiesto un livello iniziale - questo processo è adatto a tutti,
+					indifferentemente da età, genere o livello di fitness.
+				</p>
+			</div>
 		</div>
-	</div>
-</section>
+	</section>
+</div>

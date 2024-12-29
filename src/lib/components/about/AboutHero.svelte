@@ -1,5 +1,6 @@
 <script lang="ts">
 	import HeaderChip from '../global/HeaderChip.svelte';
+	import SpotsCounter from '../global/SpotsCounter.svelte';
 </script>
 
 <section class="my-12">
@@ -7,14 +8,14 @@
 		<!-- <div in:fade={{ duration: 300, delay: 150 }}> -->
 		<div>
 			<div class="hidden sm:block">
-				<HeaderChip text="Personal Coach & Movement Specialist" />
+				<SpotsCounter text="Un po' su di me" />
 			</div>
-			<h1 class="mt-8 text-4xl font-normal tracking-tighter text-black sm:mt-12 sm:text-5xl">
+			<h1 class="mt-3 text-3xl font-normal tracking-tighter text-black sm:mt-6 sm:text-4xl">
 				La mia storia.
 			</h1>
 		</div>
 
-		<div class="mt-8 grid h-fit grid-cols-1 gap-4 text-base text-zinc-500 sm:mt-12">
+		<div class="mt-2 grid h-fit grid-cols-1 gap-3 text-base text-zinc-500 sm:mt-4">
 			<!-- in:fade={{ duration: 300, delay: 300 }} -->
 			<p class="text-pretty">
 				Da sempre appassionato di movimento e sport, ho dedicato la mia vita a esplorare e
