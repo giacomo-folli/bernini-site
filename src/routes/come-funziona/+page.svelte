@@ -2,7 +2,7 @@
 	import Cta from '$lib/components/global/Cta.svelte';
 	import AllScope from '$lib/components/landing/AllScope.svelte';
 	import Faq from '$lib/components/landing/Faq.svelte';
-	import Howitworks from '$lib/components/landing/HowItWorks.svelte';
+	import Howitworks from '$lib/components/landing/Howitworks.svelte';
 	import Pricing from '$lib/components/landing/Pricing.svelte';
 </script>
 
