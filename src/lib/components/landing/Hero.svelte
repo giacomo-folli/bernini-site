@@ -1,5 +1,26 @@
-<script>
-	import SpotsCounter from '../global/SpotsCounter.svelte';
+<script lang="ts">
+	import { onMount } from 'svelte';
+	import { fade, slide } from 'svelte/transition';
+
+	type CitPart = { i: number; first: string; last: string };
+
+	const citParts: CitPart[] = [
+		{ i: 1, first: 'thoughts', last: 'words' },
+		{ i: 2, first: 'words', last: 'actions' },
+		{ i: 3, first: 'actions', last: 'habits' },
+		{ i: 4, first: 'habits', last: 'character' },
+		{ i: 5, first: 'character', last: 'destiny' }
+	];
+
+	let currentCitPart = citParts[0];
+	onMount(() => {
+		const interval = setInterval(() => {
+			const newIndex = (currentCitPart.i + 1) % citParts.length;
+			currentCitPart = citParts[newIndex];
+		}, 5000);
+
+		return () => clearInterval(interval);
+	});
 </script>
 
 <section class="relative overflow-hidden">
@@ -17,37 +38,45 @@
 	</svg> -->
 	<!-- FINE BACKGROUND -->
 
-	<div class="py-24">
+	<div>
 		<div>
-			<SpotsCounter />
-			<h2 class="mt-12 text-5xl font-normal tracking-tighter text-black">
-				Forza &amp; equilibrio <span class="block">per un corpo e una mente sani.</span>
+			<!-- <SpotsCounter text="1-1 coaching spots available" /> -->
+			<h2 class="mt-10 text-5xl font-normal tracking-tighter text-black">
+				<!-- Forza &amp; equilibrio <span class="block">per un corpo e una mente sani.</span> -->
+				Educazione al movimento per una vita <span class="font-medium underline">sana</span> e
+				<span class="font-medium underline">attiva</span>.
 			</h2>
 		</div>
 
-		<ul
-			class="group mt-12 grid h-full max-w-xl grid-cols-1 gap-2 text-base text-zinc-500 lg:grid-cols-2"
-		>
+		<div class="mt-12 grid h-full max-w-xl grid-cols-1 gap-2 text-pretty text-base text-zinc-500">
 			<div>
 				<p>
-					Supera i tuoi limiti, ridefinisci il tuo potenziale e scopri di cosa è davvero capace il
-					tuo corpo.
+					Sviluppa un corpo forte e intelligente, una mente presente e agile, con un approccio che
+					tiene in considerazione la <span class="font-semibold">persona</span> nella sua interezza.
+				</p>
+			</div>
+		</div>
+
+		<em class="mt-12 flex max-w-xl text-pretty text-sm text-zinc-500">
+			<div class="flex-1">
+				<p>
+					“Watch your
+					{#key currentCitPart.first}
+						<span class="underline decoration-2 underline-offset-2" in:fade={{ duration: 1000 }}
+							>{currentCitPart.first}</span
+						>
+					{/key}, they become your
+					{#key currentCitPart.last}
+						<span
+							class="underline decoration-2 underline-offset-2"
+							in:fade={{ delay: 200, duration: 1000 }}>{currentCitPart.last}</span
+						>
+					{/key}”
 				</p>
 			</div>
 			<div>
-				<p>
-					Scopri la potenza del movimento naturale e trasforma il tuo corpo e la tua mente con <span
-						class="font-semibold"
-					>
-						Francesco Bernini
-					</span>.
-				</p>
+				<span class="ml-auto italic opacity-85">- Lao Tzu.</span>
 			</div>
-			<em class="col-span-full mt-8 text-sm">
-				<p>
-					Citazione da definire. <span class="block text-black">⏤ Detta da tizio.</span>
-				</p>
-			</em>
-		</ul>
+		</em>
 	</div>
 </section>

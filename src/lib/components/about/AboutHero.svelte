@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { fade } from 'svelte/transition';
 	import HeaderChip from '../global/HeaderChip.svelte';
 </script>
 

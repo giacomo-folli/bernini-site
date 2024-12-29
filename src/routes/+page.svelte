@@ -10,7 +10,9 @@
 </script>
 
 <div class="mx-auto max-w-2xl px-4 sm:px-6 md:px-12 lg:px-8">
-	<Hero />
+	<div class="mt-14 lg:mt-24 mb-14">
+		<Hero />
+	</div>
 	<LogoCloud />
 	<!-- <Work /> -->
 	<Howitworks />
