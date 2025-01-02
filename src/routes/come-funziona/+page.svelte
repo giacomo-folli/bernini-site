@@ -9,7 +9,20 @@
 <div class="mx-auto max-w-2xl px-4 sm:px-6 md:px-12 lg:px-8">
 	<Howitworks />
 	<AllScope />
+
+	<div class="w-full overflow-hidden rounded-2xl border">
+		<img class="object-cover" src="https://placehold.co/650x400" alt="placeholder" />
+	</div>
+
 	<Pricing />
 	<Faq />
 	<Cta />
 </div>
+
+<svelte:head>
+	<title>Come Funziona | Francesco Bernini</title>
+	<meta
+		name="description"
+		content="Scopri come allenarti con me e tutte le altre info necessarie."
+	/>
+</svelte:head>

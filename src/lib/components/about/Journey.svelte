@@ -45,7 +45,7 @@
 
 							<span class="ml-2 text-xs text-zinc-500">{milestone.year}</span>
 						</div>
-						<p class="my-3 text-pretty text-sm text-zinc-600">{milestone.description}</p>
+						<p class="mb-3 text-pretty text-sm text-zinc-600">{milestone.description}</p>
 					</li>
 				{/each}
 			</ul>

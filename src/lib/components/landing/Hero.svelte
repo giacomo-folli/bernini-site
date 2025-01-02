@@ -57,7 +57,13 @@
 			</div>
 		</div>
 
-		<em class="mt-12 flex max-w-xl text-pretty text-sm text-zinc-500">
+		<div class="mt-12 grid h-full max-w-xl grid-cols-1 gap-2 text-pretty text-base text-zinc-500">
+			<div>
+				<img src="https://placehold.co/600" alt="placeholder" />
+			</div>
+		</div>
+
+		<em class="mt-2 flex max-w-xl text-pretty text-sm text-zinc-500">
 			<div class="flex-1">
 				<p>
 					“Watch your

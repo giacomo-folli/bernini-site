@@ -21,17 +21,19 @@
 	};
 
 	function handleClick() {
-		goto('/calendario/break-dance-principianti');
+		// goto('/calendario/break-dance-principianti');
 	}
 </script>
 
 <div
-	class="relative py-2 px-1 sm:py-3"
+	class="relative px-1 py-2 sm:py-3"
 	on:mouseenter={() => (showPopover = true)}
 	on:mouseleave={() => (showPopover = false)}
+	role="presentation"
 >
 	<button
-		class="mx-auto flex h-8 w-8 items-center justify-center rounded-full hover:bg-zinc-50 {day === new Date().getDate() &&
+		class="mx-auto flex h-8 w-8 items-center justify-center rounded-full hover:bg-zinc-50 {day ===
+			new Date().getDate() &&
 		selectedMonth === new Date().getMonth() &&
 		selectedYear === new Date().getFullYear()
 			? 'bg-black text-white hover:bg-zinc-800'

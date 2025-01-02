@@ -22,8 +22,8 @@
 </script>
 
 <section class="mt-12 rounded-3xl bg-white">
-	<div class="p-4 sm:p-8">
-		<div class="grid gap-4 sm:grid-cols-2 sm:gap-6 md:grid-cols-3">
+	<div class="p-0 sm:p-4">
+		<div class="grid gap-2 sm:grid-cols-2 sm:gap-4 md:grid-cols-3">
 			{#each images as image, i}
 				<div
 					class="group relative aspect-square overflow-hidden rounded-2xl bg-black/5 sm:rounded-2xl"

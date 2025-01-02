@@ -7,10 +7,10 @@
 </script>
 
 <svelte:head>
-	<title>Chi Sono | Francesco Bernini - Personal Coach</title>
+	<title>Chi Sono | Francesco Bernini</title>
 	<meta
 		name="description"
-		content="Scopri la storia e la filosofia di Francesco Bernini, personal coach specializzato in movimento naturale, break dance e parkour."
+		content="Scopri la storia e la filosofia di Francesco Bernini, personal coach."
 	/>
 </svelte:head>
 

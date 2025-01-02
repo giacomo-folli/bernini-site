@@ -113,7 +113,7 @@
 		style="grid-template-rows: repeat(auto-fill, minmax(2.5rem, 1fr));"
 	>
 		{#each previousDays as _}
-			<div class="relative px-1 py-2 sm:py-3" />
+			<div class="relative px-1 py-2 sm:py-3"></div>
 		{/each}
 
 		{#each days as day}

@@ -35,8 +35,8 @@
 				: 'bg-gradientdown size-12 opacity-50 '}"
 			><img
 				class="inline-block h-12 w-12 rounded-full border grayscale"
-				src="/person.jpg"
-				alt="#"
+				src="https://placehold.co/100/000000/FFF"
+				alt="placeholder"
 			/></button
 		><button
 			on:click={() => (testimonialActive = 2)}
@@ -46,8 +46,8 @@
 				: 'bg-gradientdown size-12 opacity-50 '}"
 			><img
 				class="inline-block h-12 w-12 rounded-full border grayscale"
-				src="/person.jpg"
-				alt="@paco.folli on twitter"
+				src="https://placehold.co/100/000000/FFF"
+				alt="placeholder"
 			/></button
 		>
 	</div>
