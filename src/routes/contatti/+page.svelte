@@ -53,54 +53,52 @@
 	</script>
 </svelte:head>
 
-<div class="mx-auto max-w-2xl px-4 sm:px-6 md:px-12 lg:px-8">
-	<div class="mx-auto mb-4 mt-14 max-w-2xl lg:mt-24 lg:max-w-none">
+<div class="mx-auto max-w-2xl px-4 pt-20 sm:px-6 md:px-12 lg:px-8">
+	<div>
+		<h1 class="mt-3 text-3xl font-normal tracking-tighter text-black sm:mt-6 sm:text-4xl">
+			Contatti
+		</h1>
+		<p class="text-md mt-2 text-zinc-600">
+			Hai domande? Sono qui per aiutarti a iniziare il tuo percorso verso un movimento migliore.
+		</p>
+	</div>
+
+	<div class="mt-4 grid grid-cols-1 gap-10">
 		<div>
-			<h1 class="mt-3 text-3xl font-normal tracking-tighter text-black sm:mt-6 sm:text-4xl">
-				Contatti
-			</h1>
-			<p class="text-md mt-2 text-zinc-600">
-				Hai domande? Sono qui per aiutarti a iniziare il tuo percorso verso un movimento migliore.
-			</p>
+			<ContactInfo />
 		</div>
+		<div>
+			<h2 class="mb-4 text-xl font-medium text-black">Scrivimi</h2>
 
-		<div class="mt-4 grid grid-cols-1 gap-12">
-			<div>
-				<ContactInfo />
-			</div>
-			<div>
-				<h2 class="mb-4 text-xl font-medium text-black">Scrivimi</h2>
-
-				<ContactForm />
-			</div>
-		</div>
-
-		<div class="mt-16">
-			<h2 class="text-xl font-medium text-black">Dove trovarmi</h2>
-			<div class="my-6">
-				<Map />
-			</div>
-			<div>
-				<h3 class="text-xl font-medium text-black">Orari</h3>
-				<dl class="mt-4 space-y-2">
-					<div class="flex justify-between text-sm">
-						<dt class="text-zinc-600">Lunedì - Venerdì</dt>
-						<dd class="text-black">9:00 - 20:00</dd>
-					</div>
-					<div class="flex justify-between text-sm">
-						<dt class="text-zinc-600">Sabato</dt>
-						<dd class="text-black">10:00 - 16:00</dd>
-					</div>
-					<div class="flex justify-between text-sm">
-						<dt class="text-zinc-600">Domenica</dt>
-						<dd class="text-black">Chiuso</dd>
-					</div>
-				</dl>
-			</div>
-		</div>
-
-		<div class="mt-16">
-			<Newsletter />
+			<ContactForm />
 		</div>
 	</div>
+
+	<div class="mt-12">
+		<div class="mb-6">
+			<h3 class="text-xl font-medium text-black">Orari</h3>
+			<dl class="mt-4 space-y-2">
+				<div class="flex justify-between text-sm">
+					<dt class="text-zinc-600">Lunedì - Venerdì</dt>
+					<dd class="text-black">9:00 - 20:00</dd>
+				</div>
+				<div class="flex justify-between text-sm">
+					<dt class="text-zinc-600">Sabato</dt>
+					<dd class="text-black">10:00 - 16:00</dd>
+				</div>
+				<div class="flex justify-between text-sm">
+					<dt class="text-zinc-600">Domenica</dt>
+					<dd class="text-black">Chiuso</dd>
+				</div>
+			</dl>
+		</div>
+		<h2 class="text-xl font-medium text-black">Dove trovarmi</h2>
+		<div class="my-6">
+			<Map />
+		</div>
+	</div>
+
+	<!-- <div class="mt-16">
+			<Newsletter />
+		</div> -->
 </div>
