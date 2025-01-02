@@ -6,7 +6,8 @@
 	const hrefs = [
 		{ url: '/come-funziona', title: 'Classi' },
 		{ url: '/calendario', title: 'Calendario' },
-		{ url: '/chi-sono', title: 'La mia storia' }
+		{ url: '/chi-sono', title: 'La mia storia' },
+		{ url: '/contatti', title: 'Contatti' }
 	];
 
 	onNavigate(() => {
