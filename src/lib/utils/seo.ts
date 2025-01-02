@@ -1,7 +1,7 @@
 // SEO Constants
 export const DEFAULT_TITLE = 'Francesco Bernini | Personal Coach & Movement Specialist';
 export const DEFAULT_DESCRIPTION = 'Scopri un nuovo modo di allenarti con Francesco Bernini. Movimento naturale, parkour e allenamento funzionale personalizzato a Milano.';
-export const SITE_URL = 'https://bernini.vercel.com';
+export const SITE_URL = 'https://bernini.vercel.app';
 
 export const KEYWORDS = [
   'personal trainer salsomaggiore',

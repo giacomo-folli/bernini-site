@@ -65,8 +65,8 @@
 			"@context": "https://schema.org",
 			"@type": "Person",
 			"name": "Francesco Bernini",
-			"url": "https://bernini.vercel.com",
-			"image": "https://bernini.vercel.com/profile.jpg",
+			"url": "https://bernini.vercel.app",
+			"image": "https://bernini.vercel.app/profile.jpg",
 			"sameAs": [
 				"https://instagram.com/francescobernini7"
 				// "https://facebook.com/francesco.bernini.coach"
