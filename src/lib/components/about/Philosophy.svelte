@@ -22,7 +22,7 @@
 </script>
 
 <section>
-	<div class="py-4 sm:py-8 md:py-12">
+	<div class="py-4 sm:py-6 md:pb-12 md:pt-8">
 		<h2
 			class="mb-12 mt-10 text-2xl font-light tracking-tighter text-black sm:mb-4 sm:mt-3 sm:text-3xl"
 		>

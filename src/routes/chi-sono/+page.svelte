@@ -14,8 +14,21 @@
 	/>
 </svelte:head>
 
-<div class="mx-auto max-w-2xl px-4 sm:px-6 md:px-12 lg:px-8">
+<div class="mx-auto max-w-2xl px-4 py-20 sm:px-6 md:px-12 lg:px-8">
 	<AboutHero />
+
+	<div class="mt-6 grid h-full grid-cols-1 gap-2 text-pretty text-base text-zinc-500">
+		<div>
+			<img
+				width="100%"
+				height="auto"
+				src="https://placehold.co/600"
+				alt="placeholder"
+				class="object-cover"
+			/>
+		</div>
+	</div>
+
 	<Journey />
 	<ImageGallery />
 	<Philosophy />

@@ -1,7 +1,8 @@
 <script lang="ts">
+	import { goto } from '$app/navigation';
 	import Calendar from '$lib/components/calendar/Calendar.svelte';
 	import TrainingFilter from '$lib/components/calendar/TrainingFilter.svelte';
-	import SpotsCounter from '$lib/components/global/SpotsCounter.svelte';
+	import { onMount } from 'svelte';
 
 	let selectedMonth = new Date().getMonth();
 	let selectedYear = new Date().getFullYear();
@@ -15,6 +16,8 @@
 		'Verticali',
 		'Flessibilità'
 	];
+
+	onMount(() => goto('/home'));
 </script>
 
 <svelte:head>
@@ -45,9 +48,8 @@
 	</script>
 </svelte:head>
 
-<div class="mx-auto max-w-2xl px-4 py-24 sm:px-6 md:px-12 lg:px-8">
-	<SpotsCounter text="Controlla i giorni degli allenamenti" />
-	<div class="mx-auto mt-6 max-w-3xl">
+<div class="mx-auto max-w-2xl px-4 py-20 sm:px-6 md:px-12 lg:px-8">
+	<div class="mx-auto max-w-3xl pt-3">
 		<h1 class="text-3xl font-normal tracking-tighter text-black sm:text-4xl">
 			Calendario Allenamenti
 		</h1>

@@ -57,9 +57,15 @@
 			</div>
 		</div>
 
-		<div class="mt-12 grid h-full max-w-xl grid-cols-1 gap-2 text-pretty text-base text-zinc-500">
+		<div class="mt-12 grid h-full grid-cols-1 gap-2 text-pretty text-base text-zinc-500">
 			<div>
-				<img src="https://placehold.co/600" alt="placeholder" />
+				<img
+					height="auto"
+					width="100%"
+					src="https://placehold.co/600"
+					alt="placeholder"
+					class="object-cover"
+				/>
 			</div>
 		</div>
 

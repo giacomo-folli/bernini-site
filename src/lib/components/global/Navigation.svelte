@@ -5,7 +5,7 @@
 
 	const hrefs = [
 		{ url: '/come-funziona', title: 'Classi' },
-		{ url: '/calendario', title: 'Calendario' },
+		// { url: '/calendario', title: 'Calendario' },
 		{ url: '/chi-sono', title: 'La mia storia' },
 		{ url: '/contatti', title: 'Contatti' }
 	];
@@ -19,7 +19,7 @@
 	<div class="sm:mx-auto sm:max-w-2xl sm:px-4">
 		<div class="mx-auto w-full">
 			<div
-				class="relative mx-auto flex w-full flex-col rounded-b-xl bg-white p-3 uppercase shadow-md ring-1 ring-zinc-200 backdrop-blur-xl backdrop-filter sm:rounded-xl sm:shadow-sm md:flex-row md:items-center md:justify-between md:rounded-full"
+				class="relative mx-auto flex w-full flex-col bg-white p-3 uppercase ring-1 ring-zinc-200 sm:rounded-xl sm:rounded-b-xl sm:shadow-sm sm:backdrop-blur-xl sm:backdrop-filter md:flex-row md:items-center md:justify-between md:rounded-full"
 			>
 				<div class="flex flex-row items-center justify-between md:justify-start">
 					<a
@@ -61,7 +61,7 @@
 						: 'hidden'}"
 				>
 					<ul
-						class="text-md list-none items-center justify-center gap-4 space-y-2 px-2 text-left text-zinc-500 sm:text-center sm:text-xs md:ml-auto md:inline-flex md:space-y-0 md:text-left"
+						class="text-md list-none items-center justify-center gap-4 space-y-4 px-2 text-center text-zinc-500 sm:text-center sm:text-xs md:ml-auto md:inline-flex md:space-y-0 md:text-left"
 					>
 						{#each hrefs as item}
 							<li>
@@ -71,14 +71,15 @@
 							</li>
 						{/each}
 
-						<!-- <li class="shrink-0 pt-8 sm:pt-0">
+						<li class="flex shrink-0 items-center justify-center pt-6 sm:pt-0">
 							<a
-								href="#pricing"
+								on:click={() => (open = false)}
+								href="/contatti#form"
 								class="inline-flex h-8 w-auto items-center justify-center rounded-full border-2 border-black bg-black px-6 py-4 text-white ring-2 ring-transparent duration-200 hover:bg-transparent hover:text-black focus:ring-2 focus:ring-black focus:ring-offset-2 sm:px-4 sm:py-2"
 							>
-								Prenota Ora</a
+								Scrivimi</a
 							>
-						</li> -->
+						</li>
 					</ul>
 				</nav>
 			</div>

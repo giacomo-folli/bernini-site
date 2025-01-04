@@ -6,7 +6,7 @@
 	import Pricing from '$lib/components/landing/Pricing.svelte';
 </script>
 
-<div class="mx-auto max-w-2xl px-4 sm:px-6 md:px-12 lg:px-8">
+<div class="mx-auto max-w-2xl px-4 py-20 sm:px-6 md:px-12 lg:px-8">
 	<Howitworks />
 	<AllScope />
 

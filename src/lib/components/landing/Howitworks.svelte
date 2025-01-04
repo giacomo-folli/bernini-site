@@ -1,18 +1,7 @@
-<script>
-	import SpotsCounter from '../global/SpotsCounter.svelte';
-</script>
-
-<div class="mb-4 mt-14 lg:mt-24">
+<div class="pt-3">
 	<section class="scroll-mt-12" id="how">
 		<div>
-			<div>
-				<div class="hidden sm:block">
-					<SpotsCounter text="Scopri come iniziare ad allenarti con me" />
-				</div>
-				<h1 class="mt-3 text-3xl font-normal tracking-tighter text-black sm:mt-6 sm:text-4xl">
-					Come funziona
-				</h1>
-			</div>
+			<h1 class="text-3xl font-normal tracking-tighter text-black sm:text-4xl">Come funziona</h1>
 
 			<div class="mt-4 flex flex-col gap-2 text-pretty text-sm text-zinc-500">
 				<p>
