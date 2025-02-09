@@ -63,15 +63,17 @@
 				<!-- <img
 					height="auto"
 					width="100%"
-					src="https://bernini.vercel.app/images/park-session-1.jpeg"
+					src="https://bernini.vercel.app/images/images/park-session-1.jpeg"
 					alt="placeholder"
 					class="object-cover"
 				/> -->
 
 				<img
-					class="absolute left-0 top-0 h-full w-full"
-					srcset={optimize('/images/park-session-1.jpeg')}
-					alt={'lol'}
+					class="object-cover"
+					height="auto"
+					width="100%"
+					srcset={optimize('/images/images/park-session-1.jpeg')}
+					alt="park-session"
 				/>
 			</div>
 		</div>
