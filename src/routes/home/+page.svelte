@@ -1,6 +1,5 @@
 <script lang="ts">
 	import Cta from '$lib/components/global/Cta.svelte';
-	import AllScope from '$lib/components/landing/AllScope.svelte';
 	import Hero from '$lib/components/landing/Hero.svelte';
 	import ChiSono from '$lib/components/landing/ChiSono.svelte';
 	import LogoCloud from '$lib/components/landing/LogoCloud.svelte';

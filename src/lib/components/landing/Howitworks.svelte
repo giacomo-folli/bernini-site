@@ -8,14 +8,25 @@
 					Che si scelga di allenarsi con me on line o di persona, verrà sempre richiesto di
 					compilare un questionario, che mi aiuti a capire lo stato fisico del cliente, il tempo a
 					disposizione, gli obbiettivi, e altre informazioni importanti per poter creare un
-					programma su misura. Nel caso si scelga l’online coaching, ogni programma avrà una durata
-					di 6 settimane, e durante la settima settimana che verrà presa di scarico, verrà
-					strutturata la nuova fase di allenamento. In tutti i casi il percorso che propongo è
-					adatto solamente a chi è davvero disposto a impegnare il proprio tempo e le proprie
-					energie per lavorare sul proprio miglioramento - per questo accetto pochi studenti, e
-					voglio essere profondamente coinvolto nel processo di ognuno di loro. Questo non significa
-					che sia richiesto un livello iniziale - questo processo è adatto a tutti,
-					indifferentemente da età, genere o livello di fitness.
+					programma su misura.
+				</p>
+				<p>
+					Nel caso si scelga l’online coaching, ogni programma avrà una durata di <span
+						class="font-bold">6 settimane</span
+					>, e durante la settima settimana che verrà presa di scarico, verrà strutturata la
+					nuovafase di allenamento.
+				</p>
+
+				<p>
+					In tutti i casi il percorso che propongo è adatto solamente a chi è davvero disposto a
+					impegnare il proprio tempo e le proprie energie per lavorare sul proprio miglioramento -
+					per questo accetto pochi studenti, e voglio essere profondamente coinvolto nel processo di
+					ognuno di loro.
+				</p>
+				<p>
+					<span class="font-bold">
+						Questo non significa che sia richiesto un livello iniziale
+					</span> - questo processo è adatto a tutti, indifferentemente da età, genere o livello di fitness.
 				</p>
 			</div>
 		</div>

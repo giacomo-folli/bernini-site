@@ -4,15 +4,17 @@
 	import Faq from '$lib/components/landing/Faq.svelte';
 	import Howitworks from '$lib/components/landing/Howitworks.svelte';
 	import Pricing from '$lib/components/landing/Pricing.svelte';
+	import Image from '$lib/components/global/Image.svelte';
 </script>
 
 <div class="mx-auto max-w-2xl px-4 py-20 sm:px-6 md:px-12 lg:px-8">
 	<Howitworks />
-	<AllScope />
 
-	<div class="w-full overflow-hidden rounded-2xl border">
-		<img class="object-cover" src="https://placehold.co/650x400" alt="placeholder" />
+	<div class="mt-8 w-full overflow-hidden rounded-2xl border">
+		<Image src="/capacity.jpg" alt="park session" />
 	</div>
+
+	<AllScope />
 
 	<Pricing />
 	<Faq />

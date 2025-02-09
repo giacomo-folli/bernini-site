@@ -7,7 +7,7 @@
 	</p>
 	<div class="mt-8 flex justify-center">
 		<a
-			href="/come-funziona/#pricing"
+			href="/contatti"
 			class="shadow-button flex h-10 w-auto items-center justify-between rounded-full border border-gray-300 bg-white px-4 py-2 text-sm font-semibold text-gray-500 shadow-gray-500/5 ring-offset-gray-200 transition-all duration-200 hover:shadow-none focus:ring-2 focus:ring-blue-950 focus:ring-offset-2"
 			>Inizia oggi
 		</a>

@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onNavigate } from '$app/navigation';
+	import { page } from '$app/stores';
 
 	let open = false;
 
@@ -9,6 +10,10 @@
 		{ url: '/chi-sono', title: 'La mia storia' },
 		{ url: '/contatti', title: 'Contatti' }
 	];
+
+	$: selected = (url: string) => {
+		return $page.url.pathname === url;
+	};
 
 	onNavigate(() => {
 		open = false;
@@ -65,8 +70,12 @@
 					>
 						{#each hrefs as item}
 							<li>
-								<a on:click={() => (open = false)} href={item.url} class="shrink-0 hover:text-black"
-									>{item.title}</a
+								<a
+									on:click={() => (open = false)}
+									href={item.url}
+									class="shrink-0 hover:text-black {selected(item.url)
+										? 'font-semibold text-black underline underline-offset-2'
+										: ''}">{item.title}</a
 								>
 							</li>
 						{/each}
