@@ -70,7 +70,7 @@
 
 				<img
 					class="absolute left-0 top-0 h-full w-full"
-					srcset={optimize('https://bernini.vercel.app/images/park-session-1.jpeg')}
+					srcset={optimize('/images/park-session-1.jpeg')}
 					alt={'lol'}
 				/>
 			</div>
