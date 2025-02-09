@@ -72,6 +72,7 @@
 					srcset={optimize('/images/images/park-session-1.jpeg')}
 					sizes="(max-width: 640px) 640px,(max-width: 960px) 960px,1280px"
 					alt="park-session"
+					loading="lazy"
 				/>
 			</div>
 		</div>
