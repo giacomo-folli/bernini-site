@@ -1,11 +1,7 @@
 import { dev } from '$app/environment';
 
 export function optimize(src: string, widths = [640, 960, 1280], quality = 90) {
-	console.log('DDDD');
-
 	if (dev) return src;
-
-	console.log('AAAA');
 
 	return widths
 		.slice()

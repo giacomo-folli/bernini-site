@@ -68,6 +68,7 @@
 					class="object-cover"
 				/> -->
 
+				{optimize('/images/images/park-session-1.jpeg')}
 				<img
 					class="object-cover"
 					height="auto"
