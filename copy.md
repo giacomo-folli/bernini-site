@@ -115,3 +115,5 @@ Seguimi sui social:
 5. **Unisciti alla community del movimento**
    Ideale per: Pagina dei corsi di gruppo, sezione blog/risorse
    Contesto: Promuove un senso di appartenenza e incoraggia la partecipazione alle attività di gruppo
+
+   UPDATED

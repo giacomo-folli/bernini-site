@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { optimize } from '$lib/utils/image';
 	import { onMount } from 'svelte';
 	import { fade, slide } from 'svelte/transition';
 
@@ -59,12 +60,18 @@
 
 		<div class="mt-12 grid h-full grid-cols-1 gap-2 text-pretty text-base text-zinc-500">
 			<div>
-				<img
+				<!-- <img
 					height="auto"
 					width="100%"
-					src="https://placehold.co/600"
+					src="https://bernini.vercel.app/images/park-session-1.jpeg"
 					alt="placeholder"
 					class="object-cover"
+				/> -->
+
+				<img
+					class="absolute left-0 top-0 h-full w-full"
+					srcset={optimize('https://bernini.vercel.app/images/park-session-1.jpeg')}
+					alt={'lol'}
 				/>
 			</div>
 		</div>
