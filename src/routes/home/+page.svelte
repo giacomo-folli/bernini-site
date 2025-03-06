@@ -5,6 +5,14 @@
 	import LogoCloud from '$lib/components/landing/LogoCloud.svelte';
 	import Testimonials from '$lib/components/landing/Testimonials.svelte';
 	import { DEFAULT_DESCRIPTION, defaultOpenGraph } from '$lib/utils/seo';
+	import { onMount } from 'svelte';
+
+	onMount(async () => {
+		const res = await fetch('https://bernini-admin.pages.dev/api/classes');
+		const data = res.json();
+
+		console.log('aioo', data);
+	});
 </script>
 
 <div class="mx-auto max-w-2xl px-4 sm:px-6 md:px-12 lg:px-8">
