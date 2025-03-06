@@ -8,7 +8,11 @@
 	import { onMount } from 'svelte';
 
 	onMount(async () => {
-		const res = await fetch('https://bernini-admin.pages.dev/api/classes');
+		const res = await fetch('https://bernini-admin.pages.dev/api/classes', {
+			headers: {
+				'Access-Control-Allow-Origin': 'https://bernini.vercel.app'
+			}
+		});
 		const data = res.json();
 
 		console.log('aioo', data);
