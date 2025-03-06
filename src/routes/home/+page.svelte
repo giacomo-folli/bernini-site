@@ -10,7 +10,7 @@
 	onMount(async () => {
 		const res = await fetch('https://bernini-admin.pages.dev/api/classes', {
 			headers: {
-				'Access-Control-Allow-Origin': 'https://bernini.vercel.app'
+				'Access-Control-Allow-Origin': '*'
 			}
 		});
 		const data = res.json();
