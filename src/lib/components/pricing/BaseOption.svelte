@@ -44,10 +44,10 @@
 		{/if} -->
 	</div>
 
-	<div class="mt-6">
+	<!-- <div class="mt-6">
 		<a
 			class="flex h-10 items-center justify-between rounded-full border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-500 shadow-zinc-500/5 ring-offset-zinc-200 transition-all duration-300 hover:bg-black hover:text-white focus:ring-2 focus:ring-blue-950 focus:ring-offset-2"
 			href="#_">Scopri di più <span>&rarr;</span></a
 		>
-	</div>
+	</div> -->
 </section>
