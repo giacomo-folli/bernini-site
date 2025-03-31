@@ -4,17 +4,16 @@
 	import Philosophy from '$lib/components/about/Philosophy.svelte';
 	import ImageGallery from '$lib/components/about/ImageGallery.svelte';
 	import Cta from '$lib/components/global/Cta.svelte';
+	import Page from '$lib/components/Page.svelte';
+	import Seo from '$lib/components/global/Seo.svelte';
 </script>
 
-<svelte:head>
-	<title>Chi Sono | Francesco Bernini</title>
-	<meta
-		name="description"
-		content="Scopri la storia e la filosofia di Francesco Bernini, personal coach."
-	/>
-</svelte:head>
+<Seo
+	title="Chi Sono | Francesco Bernini"
+	description="Scopri la storia e la filosofia di Francesco Bernini, personal coach."
+/>
 
-<div class="mx-auto max-w-2xl px-4 py-20 sm:px-6 md:px-12 lg:px-8">
+<Page id="about">
 	<AboutHero />
 
 	<div class="mt-6 grid h-full grid-cols-1 gap-2 text-pretty text-base text-zinc-500">
@@ -33,4 +32,4 @@
 	<ImageGallery />
 	<Philosophy />
 	<Cta />
-</div>
+</Page>

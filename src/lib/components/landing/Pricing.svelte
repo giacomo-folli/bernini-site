@@ -2,7 +2,6 @@
 	import BaseOption from '../pricing/BaseOption.svelte';
 	import BookACall from '../pricing/BookACall.svelte';
 	import GoodToKnow from '../pricing/GoodToKnow.svelte';
-	import IntroBlock from '../pricing/IntroBlock.svelte';
 </script>
 
 <section class="scroll-mt-4" id="pricing">

@@ -1,4 +1,4 @@
-<div class="h-full overflow-hidden rounded-3xl bg-black p-8 text-center">
+<div class="h-fit overflow-hidden rounded-3xl bg-black p-8 text-center">
 	<h2 class="text-3xl font-normal tracking-tighter text-white md:text-4xl">
 		Inizia la tua trasformazione ora
 	</h2>

@@ -21,7 +21,7 @@
 </script>
 
 <div class="fixed inset-x-0 z-50 sm:top-4">
-	<div class="sm:mx-auto sm:max-w-2xl sm:px-4">
+	<div class="sm:mx-auto sm:max-w-5xl sm:px-4">
 		<div class="mx-auto w-full">
 			<div
 				class="relative mx-auto flex w-full flex-col bg-white p-3 uppercase ring-1 ring-zinc-200 sm:rounded-xl sm:rounded-b-xl sm:shadow-sm sm:backdrop-blur-xl sm:backdrop-filter md:flex-row md:items-center md:justify-between md:rounded-full"

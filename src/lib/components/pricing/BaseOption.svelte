@@ -9,7 +9,7 @@
 	export let slogan: string = '';
 </script>
 
-<section class="flex h-fit flex-col justify-between rounded-3xl bg-white p-8 text-black">
+<section class="flex h-full flex-col justify-between rounded-3xl bg-white p-8 text-black">
 	<div>
 		<div class="flex flex-col gap-2">
 			<div class="flex flex-col gap-2">
