@@ -33,25 +33,25 @@
 
 	<div class="border-t border-zinc-200" />
 
-	<ChiSono />
-
-	<div class="border-t border-zinc-200" />
-
 	<CourseSlider />
 
 	<div class="border-t border-zinc-200" />
 
-  <div class="-mx-4 sm:-mx-6 lg:-mx-10">
-	  <Slogan />
-  </div>
+	<div class="-mx-4 sm:-mx-6 lg:-mx-10">
+		<Slogan />
+	</div>
 
 	<div class="border-t border-zinc-200" />
 
-	<Testimonials />
+	<ChiSono />
 
 	<div class="border-t border-zinc-200" />
 
 	<LogoCloud />
+
+	<div class="border-t border-zinc-200" />
+
+	<Testimonials />
 
 	<div class="border-t border-zinc-200" />
 
