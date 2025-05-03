@@ -22,11 +22,7 @@
 
 <div class="py-16">
 	<!-- Hero Section -->
-	<section
-		class="relative"
-		use:inView
-		on:enter={() => (visible.hero = true)}
-	>
+	<section class="relative" use:inView on:enter={() => (visible.hero = true)}>
 		{#if visible.hero}
 			<div class="text-center" in:fly={{ y: 20, duration: 800 }}>
 				<span
@@ -45,11 +41,7 @@
 	</section>
 
 	<!-- Contact Info Section -->
-	<section
-		class="mt-16"
-		use:inView
-		on:enter={() => (visible.info = true)}
-	>
+	<section class="mt-16" use:inView on:enter={() => (visible.info = true)}>
 		{#if visible.info}
 			<div class="grid gap-8 lg:grid-cols-2">
 				<div
@@ -114,18 +106,13 @@
 	</section>
 
 	<!-- Contact Form Section -->
-	<section
-		id="form"
-		class="mt-16"
-		use:inView
-		on:enter={() => (visible.form = true)}
-	>
+	<section id="form" class="mt-16" use:inView on:enter={() => (visible.form = true)}>
 		{#if visible.form}
 			<div
 				class="rounded-3xl bg-white p-8 shadow-xl ring-1 ring-zinc-200 sm:p-12"
 				in:fly={{ y: 20, duration: 800 }}
 			>
-				<div class="mx-auto max-w-2xl">
+				<div class="mx-auto">
 					<h2 class="text-2xl font-light tracking-tight text-black">
 						Mandami un <span class="font-medium">messaggio</span>
 					</h2>
@@ -133,7 +120,7 @@
 						Compila il form sottostante e ti risponderò il prima possibile.
 					</p>
 
-					<div class="mt-8">
+					<div class="mt-8 w-full">
 						<ContactForm />
 					</div>
 				</div>
