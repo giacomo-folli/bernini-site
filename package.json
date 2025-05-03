@@ -38,6 +38,7 @@
 		"@vercel/analytics": "^1.5.0",
 		"@vercel/edge-config": "^1.4.0",
 		"clsx": "^2.1.1",
+		"motion": "^10.17.0",
 		"tailwind-merge": "^3.0.2",
 		"tailwind-scrollbar-hide": "^1.1.7"
 	}

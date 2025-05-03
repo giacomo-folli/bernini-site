@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { createEventDispatcher } from 'svelte';
+	import { fade, fly } from 'svelte/transition';
 	import type { Training } from '$lib/types/training';
 	import { getDaysInMonth, getFirstDayOfMonth } from '$lib/utils/date';
 	import CalendarDay from './CalendarDay.svelte';
@@ -51,7 +52,10 @@
 	}
 </script>
 
-<div class="rounded-3xl bg-white p-4 ring-1 ring-zinc-200 sm:p-8">
+<div
+	in:fly={{ y: 20, duration: 800 }}
+	class="overflow-hidden rounded-3xl bg-white p-4 ring-1 ring-zinc-200 sm:p-8"
+>
 	<div class="flex items-center justify-between">
 		<h2 class="text-lg font-medium text-black">
 			{monthNames[selectedMonth]}
@@ -60,7 +64,7 @@
 		<div class="flex gap-2">
 			<button
 				on:click={previousMonth}
-				class="inline-flex h-8 w-8 items-center justify-center rounded-full text-zinc-400 hover:text-black"
+				class="inline-flex h-8 w-8 items-center justify-center rounded-full text-zinc-400 transition-colors hover:bg-zinc-100 hover:text-black"
 			>
 				<span class="sr-only">Mese precedente</span>
 				<svg
@@ -75,7 +79,7 @@
 			</button>
 			<button
 				on:click={nextMonth}
-				class="inline-flex h-8 w-8 items-center justify-center rounded-full text-zinc-400 hover:text-black"
+				class="inline-flex h-8 w-8 items-center justify-center rounded-full text-zinc-400 transition-colors hover:bg-zinc-100 hover:text-black"
 			>
 				<span class="sr-only">Mese successivo</span>
 				<svg
@@ -113,7 +117,7 @@
 		style="grid-template-rows: repeat(auto-fill, minmax(2.5rem, 1fr));"
 	>
 		{#each previousDays as _}
-			<div class="relative px-1 py-2 sm:py-3"></div>
+			<div class="relative px-1 py-2 sm:py-3" />
 		{/each}
 
 		{#each days as day}

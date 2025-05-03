@@ -17,13 +17,11 @@
 	{@render children()}
 </main>
 
-<div class="pb-6">
-	<Footer />
-</div>
+<Footer />
 
-<!-- tailwid custom rules -->
 <style lang="postcss">
 	.layout {
-		@apply mx-auto w-full max-w-5xl flex-grow px-3 pb-6 sm:px-6 md:px-12 lg:px-8;
+		@apply mx-auto w-full px-4 pb-6 sm:px-6 lg:px-8 xl:px-0;
+		max-width: min(100%, 80rem);
 	}
 </style>

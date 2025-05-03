@@ -1,12 +1,12 @@
 <script lang="ts">
 	import { onNavigate } from '$app/navigation';
 	import { page } from '$app/stores';
+	import { fade, slide } from 'svelte/transition';
 
 	let open = false;
 
 	const hrefs = [
 		{ url: '/come-funziona', title: 'Classi' },
-		// { url: '/calendario', title: 'Calendario' },
 		{ url: '/chi-sono', title: 'La mia storia' },
 		{ url: '/contatti', title: 'Contatti' }
 	];
@@ -15,29 +15,52 @@
 		return $page.url.pathname === url;
 	};
 
-	onNavigate(() => {
-		open = false;
-	});
+	onNavigate(() => (open = false));
 </script>
 
-<div class="fixed inset-x-0 z-50 sm:top-4">
-	<div class="sm:mx-auto sm:max-w-5xl sm:px-4">
-		<div class="mx-auto w-full">
-			<div
-				class="relative mx-auto flex w-full flex-col bg-white p-3 uppercase ring-1 ring-zinc-200 sm:rounded-xl sm:rounded-b-xl sm:shadow-sm sm:backdrop-blur-xl sm:backdrop-filter md:flex-row md:items-center md:justify-between md:rounded-full"
+<div class="relative">
+	<div
+		class="relative mx-auto w-full px-4 py-4 sm:px-6 lg:px-8 xl:px-0"
+		style="max-width: min(100%, 90rem)"
+	>
+		<div class="flex items-center justify-between">
+			<a
+				class="text-xl font-medium tracking-tighter text-black hover:text-black/50"
+				href="/"
+				title="link to main page"
 			>
-				<div class="flex flex-row items-center justify-between md:justify-start">
+				Francesco Bernini
+			</a>
+
+			<div class="flex items-center gap-8">
+				<nav class="hidden md:block">
+					<ul class="flex items-center gap-6 text-sm">
+						{#each hrefs as item}
+							<li>
+								<a
+									href={item.url}
+									class="text-zinc-600 transition-colors hover:text-black {selected(item.url)
+										? 'font-medium text-black'
+										: ''}">{item.title}</a
+								>
+							</li>
+						{/each}
+					</ul>
+				</nav>
+
+				<div class="flex items-center gap-4">
 					<a
-						class="ml-2 inline-flex items-center gap-4 text-xl font-bold tracking-tighter text-black hover:text-black/50"
-						href="/"
-						title="link to main page"
+						href="/contatti#form"
+						class="hidden rounded-full bg-black px-4 py-1.5 text-sm font-medium text-white transition-colors hover:bg-zinc-800 md:block"
 					>
-						Bernini
+						Scrivimi
 					</a>
+
 					<button
 						on:click={() => (open = !open)}
-						aria-label="menu-button"
-						class="inline-flex items-center justify-center p-2 text-zinc-400 hover:text-cyan-300 focus:text-black focus:outline-none md:hidden"
+						class="inline-flex items-center justify-center rounded-full p-2 text-zinc-400 hover:bg-zinc-100 hover:text-black focus:outline-none md:hidden"
+						aria-expanded={open}
+						aria-label="Toggle menu"
 					>
 						<svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
 							<path
@@ -46,52 +69,53 @@
 								stroke-linejoin="round"
 								stroke-width="2"
 								d="M4 6h16M4 12h16M4 18h16"
-							>
-							</path>
+							/>
 							<path
 								class={!open ? 'hidden' : 'inline-flex'}
 								stroke-linecap="round"
 								stroke-linejoin="round"
 								stroke-width="2"
 								d="M6 18L18 6M6 6l12 12"
-							>
-							</path>
+							/>
 						</svg>
 					</button>
 				</div>
-
-				<nav
-					class="flex-grow flex-col justify-center py-8 md:flex md:flex-row md:items-end md:py-0 {open
-						? 'flex'
-						: 'hidden'}"
-				>
-					<ul
-						class="text-md list-none items-center justify-center gap-4 space-y-4 px-2 text-center text-zinc-500 sm:text-center sm:text-xs md:ml-auto md:inline-flex md:space-y-0 md:text-left"
-					>
-						{#each hrefs as item}
-							<li>
-								<a
-									on:click={() => (open = false)}
-									href={item.url}
-									class="shrink-0 hover:text-black {selected(item.url)
-										? 'font-semibold text-black underline underline-offset-2'
-										: ''}">{item.title}</a
-								>
-							</li>
-						{/each}
-
-						<li class="flex shrink-0 items-center justify-center pt-6 sm:pt-0">
-							<a
-								on:click={() => (open = false)}
-								href="/contatti#form"
-								class="inline-flex h-8 w-auto items-center justify-center rounded-full border-2 border-black bg-black px-6 py-4 text-white ring-2 ring-transparent duration-200 hover:bg-transparent hover:text-black focus:ring-2 focus:ring-black focus:ring-offset-2 sm:px-4 sm:py-2"
-							>
-								Scrivimi</a
-							>
-						</li>
-					</ul>
-				</nav>
 			</div>
 		</div>
 	</div>
+
+	{#if open}
+		<div
+			class="fixed inset-x-0 top-[73px] z-50 h-[calc(100vh-73px)] bg-zinc-100 md:hidden"
+			transition:slide={{ duration: 300 }}
+		>
+			<nav class="h-full overflow-y-auto px-4 py-8 sm:px-6">
+				<ul class="flex flex-col gap-6">
+					{#each hrefs as item}
+						<li>
+							<a
+								href={item.url}
+								class="block text-lg font-medium text-zinc-600 transition-colors hover:text-black {selected(
+									item.url
+								)
+									? 'text-black'
+									: ''}">{item.title}</a
+							>
+						</li>
+					{/each}
+					<li class="pt-6">
+						<a
+							href="/contatti#form"
+							class="inline-flex w-full items-center justify-center rounded-full bg-black px-4 py-2.5 text-base font-medium text-white transition-colors hover:bg-zinc-800"
+						>
+							Scrivimi
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	{/if}
 </div>
+
+<!-- Add padding to prevent content from hiding under fixed header -->
+<div class="h-4" />

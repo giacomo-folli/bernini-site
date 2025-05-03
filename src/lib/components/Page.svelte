@@ -2,6 +2,6 @@
 	let { id }: { id: string } = $props();
 </script>
 
-<div {id} class="mt-14 w-full py-8 lg:mt-24">
+<div {id} class="w-full py-4">
 	<slot />
 </div>

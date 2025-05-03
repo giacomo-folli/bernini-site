@@ -1,43 +1,46 @@
-<section>
-	<div>
-		<div class="grid grid-cols-2 gap-px overflow-hidden rounded-3xl sm:mx-0">
-			<div class="flex items-center bg-white p-2 hover:bg-black *:hover:invert">
-				<img
-					class="max-h-[50px] w-full object-contain grayscale"
-					src="/logos/logo-wemove.jpg"
-					alt="WeMove"
-					width="auto"
-					height="fit-content"
-				/>
-			</div>
-			<div class="flex items-center bg-white p-4 hover:bg-black *:hover:invert">
-				<img
-					class="max-h-[70px] w-full object-contain"
-					src="/logos/logo-palestra.jpg"
-					alt="Reform"
-					width="auto"
-					height="fit-content"
-				/>
-			</div>
+<script lang="ts">
+	import { fade, fly } from 'svelte/transition';
+	import { inView } from '$lib/actions/intersectionObserver';
+	
+	let visible = false;
+</script>
 
-			<!-- <div class="flex items-center bg-white p-6 sm:p-10">
-				<img
-					class="max-h-8 w-full object-contain grayscale invert"
-					src="/devdojo.svg"
-					alt="Laravel"
-					width="158"
-					height="48"
-				/>
-			</div>
-			<div class="flex items-center bg-white p-6 sm:p-10">
-				<img
-					class="max-h-8 w-full object-contain grayscale invert"
-					src="/calisteniaapp.svg"
-					alt="Laravel"
-					width="158"
-					height="48"
-				/>
-			</div> -->
+<section 
+	class="py-16"
+	use:inView
+	on:enter={() => visible = true}
+>
+	{#if visible}
+		<div class="text-center" in:fly={{ y: 20, duration: 800 }}>
+			<span class="mb-6 inline-flex items-center rounded-full bg-zinc-100 px-3 py-1 text-sm text-zinc-800"
+				>Partner</span
+			>
+			<h2 class="text-4xl font-light tracking-tight text-black lg:text-5xl">
+				Dove mi puoi <span class="font-medium">trovare</span>
+			</h2>
 		</div>
-	</div>
+
+		<div class="mx-auto mt-16 max-w-7xl px-6 lg:px-8">
+			<div class="grid grid-cols-1 items-center gap-8 rounded-3xl bg-white p-8 shadow-lg sm:grid-cols-2">
+				<div class="col-span-1 flex justify-center" in:fade={{ duration: 800, delay: 200 }}>
+					<img
+						class="max-h-16 w-full object-contain transition-all duration-300 hover:scale-105"
+						src="/logos/logo-wemove.jpg"
+						alt="WeMove"
+						width="auto"
+						height="fit-content"
+					/>
+				</div>
+				<div class="col-span-1 flex justify-center" in:fade={{ duration: 800, delay: 400 }}>
+					<img
+						class="max-h-24 w-full object-contain transition-all duration-300 hover:scale-105"
+						src="/logos/logo-palestra.jpg"
+						alt="Reform"
+						width="auto"
+						height="fit-content"
+					/>
+				</div>
+			</div>
+		</div>
+	{/if}
 </section>

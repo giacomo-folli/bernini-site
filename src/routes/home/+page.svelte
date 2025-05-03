@@ -4,6 +4,8 @@
 	import ChiSono from '$lib/components/landing/ChiSono.svelte';
 	import LogoCloud from '$lib/components/landing/LogoCloud.svelte';
 	import Testimonials from '$lib/components/landing/Testimonials.svelte';
+	import CourseSlider from '$lib/components/landing/CourseSlider.svelte';
+	import Slogan from '$lib/components/landing/Slogan.svelte';
 	import { onMount } from 'svelte';
 	import Page from '$lib/components/Page.svelte';
 	import Seo from '$lib/components/global/Seo.svelte';
@@ -15,7 +17,6 @@
 			}
 		});
 		const data = res.json();
-
 		console.log('aioo', data);
 	});
 </script>
@@ -26,29 +27,35 @@
 />
 
 <Page id="home">
-	<div class="mb-14">
+	<div class="mb-4">
 		<Hero />
 	</div>
-	<!-- <Work /> -->
+
+	<div class="border-t border-zinc-200" />
+
 	<ChiSono />
-	<div class="my-8 lg:my-12">
-		<LogoCloud />
-	</div>
 
-	<div class="my-4">
-		<Testimonials />
-	</div>
+	<div class="border-t border-zinc-200" />
 
-	<div class="my-12">
+	<CourseSlider />
+
+	<div class="border-t border-zinc-200" />
+
+  <div class="-mx-4 sm:-mx-6 lg:-mx-10">
+	  <Slogan />
+  </div>
+
+	<div class="border-t border-zinc-200" />
+
+	<Testimonials />
+
+	<div class="border-t border-zinc-200" />
+
+	<LogoCloud />
+
+	<div class="border-t border-zinc-200" />
+
+	<div class="py-16">
 		<Cta />
-	</div>
-
-	<div class="w-full">
-		<div class="mx-auto mt-4 flex w-fit flex-col gap-2 text-pretty text-sm text-zinc-500">
-			<a class="text-sm font-semibold text-zinc-500" href="/come-funziona/#">
-				<span class="underline underline-offset-2"> Vai ai corsi </span>
-				<span>&rarr;</span></a
-			>
-		</div>
 	</div>
 </Page>

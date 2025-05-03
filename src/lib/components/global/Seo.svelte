@@ -1,26 +1,45 @@
-<script>
-	export let title = 'Bernini Training';
-	export let description =
-		'Bernini Training: allenamenti di parkour, preparazione atletica, functional training e allenamenti personalizzati.';
-	export let image = '/logo.jpg';
-	export let url = 'https://www.berninitraining.com';
+<script lang="ts">
+  import { seo } from '$lib/stores/seo';
+  import { page } from '$app/stores';
+  
+  export let title = $seo.title;
+  export let description = $seo.description;
+  export let keywords = $seo.keywords;
+  export let image = $seo.image;
+  export let type = $seo.type;
+
+  const canonicalUrl = `https://berninitraining.com${$page.url.pathname}`;
 </script>
 
 <svelte:head>
-	<title>{title}</title>
-	<meta name="description" content={description} />
-
-	<!-- Open Graph / Facebook -->
-	<meta property="og:type" content="website" />
-	<meta property="og:url" content={url} />
-	<meta property="og:title" content={title} />
-	<meta property="og:description" content={description} />
-	<meta property="og:image" content={image} />
-
-	<!-- Twitter -->
-	<meta property="twitter:card" content="summary_large_image" />
-	<meta property="twitter:url" content={url} />
-	<meta property="twitter:title" content={title} />
-	<meta property="twitter:description" content={description} />
-	<meta property="twitter:image" content={image} />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <meta name="keywords" content={keywords.join(', ')} />
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:type" content={type} />
+  <meta property="og:image" content={image} />
+  <meta property="og:url" content={canonicalUrl} />
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={image} />
+  
+  <!-- Canonical -->
+  <link rel="canonical" href={canonicalUrl} />
+  
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": title,
+      "description": description,
+      "url": canonicalUrl
+    })}
+  </script>
 </svelte:head>
