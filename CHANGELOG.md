@@ -7,6 +7,7 @@ All notable changes to this project will be documented in this file.
 ### 🐛 Bug Fixes
 
 - Add missing seo propr
+- Fix wrong url in image og
 
 ## [0.1.1] - 2025-05-03
 
