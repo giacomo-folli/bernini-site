@@ -2,7 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
-## [unreleased]
+## [0.1.2] - 2025-05-03
+
+### 🚀 Features
+
+- Add readme content
+
+## [0.1.2] - 2025-05-03
 
 ### 🚀 Features
 
