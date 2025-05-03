@@ -15,26 +15,28 @@
 		return $page.url.pathname === url;
 	};
 
-	onNavigate(() => (open = false));
+	onNavigate(() => {
+		open = false;
+	});
 </script>
 
-<div class="relative">
+<div class="sticky top-0 z-50 bg-zinc-100/80 backdrop-blur-lg">
 	<div
-		class="relative mx-auto w-full px-4 py-4 sm:px-6 lg:px-8 xl:px-0"
+		class="relative mx-auto w-full px-8 py-6 sm:px-12 lg:px-16 xl:px-24"
 		style="max-width: min(100%, 90rem)"
 	>
 		<div class="flex items-center justify-between">
 			<a
-				class="text-xl font-medium tracking-tighter text-black hover:text-black/50"
+				class="text-xl font-medium tracking-tighter text-black transition-colors hover:text-black/70"
 				href="/"
 				title="link to main page"
 			>
 				Francesco Bernini
 			</a>
 
-			<div class="flex items-center gap-8">
+			<div class="flex items-center gap-10">
 				<nav class="hidden md:block">
-					<ul class="flex items-center gap-6 text-sm">
+					<ul class="flex items-center gap-10 text-sm">
 						{#each hrefs as item}
 							<li>
 								<a
@@ -51,14 +53,14 @@
 				<div class="flex items-center gap-4">
 					<a
 						href="/contatti#form"
-						class="hidden rounded-full bg-black px-4 py-1.5 text-sm font-medium text-white transition-colors hover:bg-zinc-800 md:block"
+						class="hidden rounded-full bg-black px-6 py-2.5 text-sm font-medium text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-zinc-800 md:block"
 					>
 						Scrivimi
 					</a>
 
 					<button
 						on:click={() => (open = !open)}
-						class="inline-flex items-center justify-center rounded-full p-2 text-zinc-400 hover:bg-zinc-100 hover:text-black focus:outline-none md:hidden"
+						class="inline-flex items-center justify-center rounded-full p-2 text-zinc-400 transition-colors hover:bg-zinc-200 hover:text-black focus:outline-none md:hidden"
 						aria-expanded={open}
 						aria-label="Toggle menu"
 					>
@@ -89,7 +91,7 @@
 			class="fixed inset-x-0 top-[73px] z-50 h-[calc(100vh-73px)] bg-zinc-100 md:hidden"
 			transition:slide={{ duration: 300 }}
 		>
-			<nav class="h-full overflow-y-auto px-4 py-8 sm:px-6">
+			<nav class="h-full overflow-y-auto px-8 py-8 sm:px-12">
 				<ul class="flex flex-col gap-6">
 					{#each hrefs as item}
 						<li>
@@ -106,7 +108,7 @@
 					<li class="pt-6">
 						<a
 							href="/contatti#form"
-							class="inline-flex w-full items-center justify-center rounded-full bg-black px-4 py-2.5 text-base font-medium text-white transition-colors hover:bg-zinc-800"
+							class="inline-flex w-full items-center justify-center rounded-full bg-black px-6 py-2.5 text-base font-medium text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-zinc-800"
 						>
 							Scrivimi
 						</a>
