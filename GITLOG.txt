@@ -1,0 +1,278 @@
+commit a8effa9f1e10e314bbba9fa14961d499515e2fb1
+Author: Giacomo <giacomo.folli@studenti.unipr.it>
+Date:   Sat May 3 14:10:15 2025 +0200
+
+    changes
+
+commit 1ed5e0979d4bad557337976cd02f955bee23264c
+Author: Giacomo <giacomo.folli@studenti.unipr.it>
+Date:   Sat May 3 14:00:20 2025 +0200
+
+    test changelog
+
+commit 84d5a4e59a7ad96c97b411f48754419c9703c109
+Author: Giacomo <giacomo.folli@studenti.unipr.it>
+Date:   Sat May 3 13:33:09 2025 +0200
+
+    add changelog integration
+
+commit dbab478677b428a7418732da7bd1043e6d435666
+Author: Giacomo <giacomo.folli@studenti.unipr.it>
+Date:   Sat May 3 13:22:17 2025 +0200
+
+    navbar ui
+
+commit 1a0aaece402c88de790e9bf8f177feee89c84f5e
+Author: Giacomo <giacomo.folli@studenti.unipr.it>
+Date:   Sat May 3 13:09:44 2025 +0200
+
+    fix form
+
+commit 013696eb708766e104786f1b38c36439aa936b3b
+Author: Giacomo <giacomo.folli@studenti.unipr.it>
+Date:   Sat May 3 13:03:39 2025 +0200
+
+    bolt updates
+
+commit 74c279c3e7c436e4dd3b1fcdb497b7516e73c3fe
+Author: Giacomo <giacomo.folli@studenti.unipr.it>
+Date:   Sat May 3 09:59:17 2025 +0200
+
+    text-spin
+
+commit 6737f11e5201369a24f8d789cf8fc5ba0d7b930f
+Author: Giacomo <giacomo.folli@studenti.unipr.it>
+Date:   Mon Mar 31 21:26:57 2025 +0200
+
+    update 1
+
+commit 2460a4484121283c3f07544543c33598f6a63b3c
+Author: Giacomo <giacomo.folli@studenti.unipr.it>
+Date:   Mon Mar 31 21:25:43 2025 +0200
+
+    updates
+
+commit 5e7cd2537de5bc56452c572bd30e4e6ab15eaeaa
+Author: Giacomo <giacomo.folli@studenti.unipr.it>
+Date:   Thu Mar 6 17:23:24 2025 +0100
+
+    cors
+
+commit 3101cfa11750461fb2935a35722989742e250f0c
+Author: Giacomo <giacomo.folli@studenti.unipr.it>
+Date:   Thu Mar 6 17:20:35 2025 +0100
+
+    corse
+
+commit 0bbd694a07db4a3e1e32d563379db4ae9194b1be
+Author: Giacomo <giacomo.folli@studenti.unipr.it>
+Date:   Thu Mar 6 17:02:18 2025 +0100
+
+    test
+
+commit 16f09044ba2aa6b2d360b0b9639be8d765f0a063
+Author: Giacomo <giacomo.folli@studenti.unipr.it>
+Date:   Fri Feb 28 18:00:36 2025 +0100
+
+    analytics
+
+commit 2bc98cb38f33b8e2748ac934e336fcf70b7ecea4
+Author: Giacomo <giacomo.folli@studenti.unipr.it>
+Date:   Fri Feb 28 17:59:43 2025 +0100
+
+    analytics
+
+commit 3a0e8ccbfd16afda8dc62f374190c6079e044d4a
+Author: Giacomo <giacomo.folli@studenti.unipr.it>
+Date:   Sun Feb 9 15:24:08 2025 +0100
+
+    temp
+
+commit 5e5d2a84cb6b0e94a5537bc41c0846160e5cc914
+Author: Giacomo <giacomo.folli@studenti.unipr.it>
+Date:   Sun Feb 9 14:44:20 2025 +0100
+
+    temp
+
+commit 91938a73b81e30e0f63faf825fd69fef2714c9c2
+Author: Giacomo <giacomo.folli@studenti.unipr.it>
+Date:   Sun Feb 9 14:39:39 2025 +0100
+
+    temp
+
+commit c42b33bcb7db065c8b1cb715341353d9c006fa22
+Author: Giacomo <giacomo.folli@studenti.unipr.it>
+Date:   Sun Feb 9 14:38:26 2025 +0100
+
+    temp
+
+commit 5cf42ee9e86314057dd251ca825236628e398b36
+Author: Giacomo <giacomo.folli@studenti.unipr.it>
+Date:   Sun Feb 9 14:30:36 2025 +0100
+
+    temp
+
+commit caa5e2dfc04b5731f09dde0fd13bc00bbc7d600b
+Author: Giacomo <giacomo.folli@studenti.unipr.it>
+Date:   Sun Feb 9 14:27:53 2025 +0100
+
+    temp
+
+commit 453381f440c5c7520c84addfdcfa0f24fe50ada5
+Author: Giacomo <giacomo.folli@studenti.unipr.it>
+Date:   Sun Feb 9 14:22:40 2025 +0100
+
+    temp
+
+commit 04a7b056ae8bf5634ca49fccbc14b40263cbceb5
+Author: Giacomo <giacomo.folli@studenti.unipr.it>
+Date:   Sun Feb 9 14:20:14 2025 +0100
+
+    temp
+
+commit 626c4660ca032cd6bcbcf02e321e72e2a9cc82d4
+Author: Giacomo <giacomo.folli@studenti.unipr.it>
+Date:   Sun Feb 9 14:12:08 2025 +0100
+
+    temp
+
+commit 51d0b62da86aa5c43c59531f2462dcf26924cd2d
+Author: Giacomo <giacomo.folli@studenti.unipr.it>
+Date:   Sun Feb 9 14:08:17 2025 +0100
+
+    temp
+
+commit 2d4dc4093d0e1def093e0521e86967d8dd98c5b4
+Author: Giacomo <giacomo.folli@studenti.unipr.it>
+Date:   Sun Feb 9 14:03:37 2025 +0100
+
+    vercel image optimization
+
+commit 52c980e060e2ef011b2e198d92aa2db80b1aa87d
+Author: Giacomo <giacomo.folli@studenti.unipr.it>
+Date:   Sat Feb 8 10:46:55 2025 +0100
+
+    test
+
+commit 71c048a7c5641ae628db1ff6abffbf0d0c4e1d62
+Author: Giacomo <giacomo.folli@studenti.unipr.it>
+Date:   Fri Feb 7 23:58:55 2025 +0100
+
+    upload medias
+
+commit dafc04ca30d9de347cabfee5eecf2e03b8a31e94
+Author: Giacomo <giacomo.folli@studenti.unipr.it>
+Date:   Sat Jan 4 12:01:04 2025 +0100
+
+    consolidating styles across pages
+
+commit 5fef60dc1a058705e3d81350be60f1cf6f27607a
+Author: Giacomo <giacomo.folli@studenti.unipr.it>
+Date:   Thu Jan 2 19:24:31 2025 +0100
+
+    update footer
+
+commit 4557b272317afd6d64e17d346fe75029a761c920
+Author: Giacomo <giacomo.folli@studenti.unipr.it>
+Date:   Thu Jan 2 18:49:07 2025 +0100
+
+    add contacts
+
+commit 317b76efd7bc084cb325171c3945401ca5294b39
+Author: Giacomo <giacomo.folli@studenti.unipr.it>
+Date:   Thu Jan 2 18:05:47 2025 +0100
+
+    fix seo
+
+commit 6a12866029fb8671ccc85bcf3df22c5a7ec179f5
+Author: Giacomo <giacomo.folli@studenti.unipr.it>
+Date:   Thu Jan 2 17:44:56 2025 +0100
+
+    seo optimization
+
+commit 2da80457cfb86c0020bac42c5937c4b0f0891079
+Author: Giacomo <giacomo.folli@studenti.unipr.it>
+Date:   Thu Jan 2 17:44:27 2025 +0100
+
+    add seo optimization
+
+commit 4ccca8a22a0293c4f95b98cbaab6a0d5633665b2
+Author: Giacomo <giacomo.folli@studenti.unipr.it>
+Date:   Sun Dec 29 17:39:54 2024 +0100
+
+    fix path error
+
+commit 40f952472ea39778b299845e8b17a72574d863e1
+Author: Giacomo <giacomo.folli@studenti.unipr.it>
+Date:   Sun Dec 29 17:36:56 2024 +0100
+
+    update content
+
+commit 28a78568297dbb31c083f70a83a06141e0b3b01a
+Author: Giacomo <giacomo.folli@studenti.unipr.it>
+Date:   Sun Dec 29 12:43:44 2024 +0100
+
+    update content
+
+commit cc864975d70a353d10fca57364bb592bd044dc55
+Merge: 9820be3 e910a7b
+Author: Giacomo <giacomo.folli@studenti.unipr.it>
+Date:   Sun Dec 1 20:34:42 2024 +0100
+
+    Merge remote-tracking branch 'origin/dev'
+
+commit e910a7b6e57c3ed3a005815308b3be8f0c825297
+Author: Giacomo <giacomo.folli@studenti.unipr.it>
+Date:   Sun Dec 1 20:32:35 2024 +0100
+
+    add about page
+
+commit 9820be35b65aaeae3173f76f8bb2db21db9c9dac
+Merge: 3633ede 1b3fbf0
+Author: Giacomo <giacomo.folli@studenti.unipr.it>
+Date:   Fri Nov 29 17:51:06 2024 +0100
+
+    Merge remote-tracking branch 'origin/dev'
+
+commit 1b3fbf06eb78e73f175776ef19158a68ecda2af7
+Author: Giacomo <giacomo.folli@studenti.unipr.it>
+Date:   Fri Nov 29 17:50:48 2024 +0100
+
+    fix ui bugs
+
+commit 3633edee276cc7e8b9c7c29e965acd76f7d88353
+Merge: 36cef27 5002509
+Author: Giacomo <giacomo.folli@studenti.unipr.it>
+Date:   Fri Nov 29 17:33:39 2024 +0100
+
+    Merge remote-tracking branch 'origin/dev'
+
+commit 5002509a0ca82fa589b5ee60c0add77fcedf6f22
+Author: Giacomo <giacomo.folli@studenti.unipr.it>
+Date:   Fri Nov 29 17:30:37 2024 +0100
+
+    refactor faq and general style
+
+commit 579406e7bd0e7026788d90e952ce7ea48968c8d0
+Author: Giacomo <giacomo.folli@studenti.unipr.it>
+Date:   Fri Nov 29 16:30:27 2024 +0100
+
+    adapter
+
+commit 36cef2714c42678d2ead1d80c60fea3bdd70f9c4
+Author: Giacomo <giacomo.folli@studenti.unipr.it>
+Date:   Fri Nov 29 16:28:45 2024 +0100
+
+    add vercel adapter
+
+commit b8243764b5c59d7f863a78210fe66dbb2edbf836
+Author: Giacomo <giacomo.folli@studenti.unipr.it>
+Date:   Fri Nov 29 16:28:34 2024 +0100
+
+    new pages component
+
+commit b217b90dcae7360ce291c3c56e3a4b44562b4c57
+Author: Giacomo <giacomo.folli@studenti.unipr.it>
+Date:   Fri Nov 29 15:42:08 2024 +0100
+
+    inital commit
