@@ -23,7 +23,7 @@ const defaultSeo: SeoData = {
 		'coaching personalizzato'
 	],
 	type: 'website',
-	image: '/logo.jpg'
+	image: 'https://bernini.vercel.app/logo.jpg'
 };
 
 export const seo = writable<SeoData>(defaultSeo);
