@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [unreleased]
+
+### 🚀 Features
+
+- Add readme content
+
 ## [0.1.2] - 2025-05-03
 
 ### 🐛 Bug Fixes
