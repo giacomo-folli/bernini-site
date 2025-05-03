@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [unreleased]
+
+### 🐛 Bug Fixes
+
+- Add missing seo propr
+
 ## [0.1.1] - 2025-05-03
 
 ### 🐛 Bug Fixes
