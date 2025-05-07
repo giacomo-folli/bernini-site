@@ -1,9 +1,13 @@
 <script lang="ts">
 	import { fade, fly } from 'svelte/transition';
 	import Image from '../global/Image.svelte';
-	import { inView } from '$lib/actions/intersectionObserver';
+	import { inView, type InViewEventDetail } from '$lib/actions/intersectionObserver';
 
 	let visible = false;
+
+	function handleEnter(e: CustomEvent<InViewEventDetail>) {
+		visible = true;
+	}
 
 	const courses = [
 		{
@@ -47,7 +51,7 @@
 	];
 </script>
 
-<section class="py-16" use:inView on:enter={() => (visible = true)}>
+<section class="py-16" use:inView={{ threshold: 0.1 }} on:enter={handleEnter}>
 	{#if visible}
 		<div class="px-4 text-center sm:px-6 lg:px-0" in:fly={{ y: 20, duration: 800 }}>
 			<span

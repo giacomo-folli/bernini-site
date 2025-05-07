@@ -35,10 +35,10 @@
 			</p>
 			<div class="mt-6 flex flex-col gap-4 sm:flex-row lg:mt-10">
 				<a
-					href="/come-funziona"
+					href="/calendario"
 					class="inline-flex items-center justify-center rounded-full bg-black px-6 py-3 text-sm font-semibold text-white shadow-lg transition-all duration-300 hover:translate-y-[-2px] hover:bg-zinc-800"
 				>
-					Scopri i Corsi Online
+					Vedi il calendario
 				</a>
 				<a
 					href="/contatti"
@@ -65,3 +65,4 @@
 		</div>
 	</div>
 </section>
+```

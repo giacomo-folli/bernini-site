@@ -1,8 +1,9 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 	import { fade, fly } from 'svelte/transition';
-	import { inView } from '$lib/actions/intersectionObserver';
+	import { inView, type InViewEventDetail } from '$lib/actions/intersectionObserver';
 	import Seo from '$lib/components/global/Seo.svelte';
+	import MediaGallery from '$lib/components/training/MediaGallery.svelte';
 
 	const loremIpsum = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
 
@@ -21,7 +22,15 @@
 				'Tecniche di allineamento avanzate'
 			],
 			requirements: ['Nessuna esperienza richiesta', 'Buona mobilità delle spalle consigliata'],
-			schedule: 'Lezioni settimanali di 90 minuti'
+			schedule: 'Lezioni settimanali di 90 minuti',
+			videos: [
+				'/videos/videos/indoor-session-1.mp4',
+				'/videos/videos/indoor-session-2.mp4'
+			],
+			images: [
+				'/images/images/park-session-1.jpeg',
+				'/images/images/park-session-2.jpeg'
+			]
 		},
 		movement: {
 			title: 'Movement',
@@ -37,7 +46,15 @@
 				'Sviluppo della creatività nel movimento'
 			],
 			requirements: ['Adatto a tutti i livelli', 'Desiderio di esplorare nuovi movimenti'],
-			schedule: 'Lezioni bisettimanali di 60 minuti'
+			schedule: 'Lezioni bisettimanali di 60 minuti',
+			videos: [
+				'/videos/videos/indoor-session-3.mp4',
+				'/videos/videos/indoor-session-4.mp4'
+			],
+			images: [
+				'/images/images/park-session-3.jpeg',
+				'/images/images/park-session-4.jpeg'
+			]
 		},
 		parkour: {
 			title: 'Parkour',
@@ -53,7 +70,15 @@
 				'Progressioni per salti e atterraggi'
 			],
 			requirements: ['Livello base di fitness', 'Voglia di sfidare i propri limiti'],
-			schedule: 'Lezioni settimanali di 90 minuti'
+			schedule: 'Lezioni settimanali di 90 minuti',
+			videos: [
+				'/videos/videos/indoor-session-1.mp4',
+				'/videos/videos/indoor-session-4.mp4'
+			],
+			images: [
+				'/images/images/park-session-1.jpeg',
+				'/images/images/park-session-4.jpeg'
+			]
 		},
 		custom: {
 			title: 'Custom',
@@ -69,7 +94,15 @@
 				'Supporto continuo'
 			],
 			requirements: ['Nessun requisito specifico', 'Determinazione a raggiungere i propri obiettivi'],
-			schedule: 'Orari flessibili in base alle tue esigenze'
+			schedule: 'Orari flessibili in base alle tue esigenze',
+			videos: [
+				'/videos/videos/indoor-session-2.mp4',
+				'/videos/videos/indoor-session-3.mp4'
+			],
+			images: [
+				'/images/images/park-session-2.jpeg',
+				'/images/images/park-session-3.jpeg'
+			]
 		}
 	};
 
@@ -78,8 +111,15 @@
 		hero: false,
 		details: false,
 		features: false,
+		media: false,
 		cta: false
 	};
+
+	function handleEnter(section: keyof typeof visible) {
+		return (e: CustomEvent<InViewEventDetail>) => {
+			visible[section] = true;
+		};
+	}
 </script>
 
 <Seo
@@ -91,8 +131,8 @@
 	<!-- Hero Section -->
 	<section
 		class="relative"
-		use:inView
-		on:enter={() => (visible.hero = true)}
+		use:inView={{ threshold: 0.1 }}
+		on:enter={handleEnter('hero')}
 	>
 		{#if visible.hero}
 			<div class="grid gap-8 lg:grid-cols-2 lg:gap-12">
@@ -108,18 +148,43 @@
 					<p class="mt-6 text-base leading-relaxed text-zinc-600 lg:text-lg">
 						{course.description}
 					</p>
+
+					<div class="mt-6 flex flex-wrap gap-6 text-sm text-zinc-600">
+						<div class="flex items-center gap-2">
+							<span class="font-medium text-black">Durata:</span>
+							{course.duration}
+						</div>
+						<div class="flex items-center gap-2">
+							<span class="font-medium text-black">Prezzo:</span>
+							€{course.price} / lezione
+						</div>
+						<div class="flex items-center gap-2">
+							<span class="font-medium text-black">Frequenza:</span>
+							{course.schedule}
+						</div>
+					</div>
+
+					<div class="mt-6">
+						<span class="font-medium text-black">Requisiti:</span>
+						<ul class="mt-2 list-inside list-disc space-y-1 text-sm text-zinc-600">
+							{#each course.requirements as requirement}
+								<li>{requirement}</li>
+							{/each}
+						</ul>
+					</div>
+
 					<div class="mt-8 flex flex-col gap-4 sm:flex-row">
 						<a
-							href="/contatti"
+							href="/calendario"
 							class="inline-flex items-center justify-center rounded-full bg-black px-6 py-3 text-sm font-semibold text-white shadow-lg transition-all duration-300 hover:bg-zinc-800 hover:translate-y-[-2px]"
 						>
-							Prenota una lezione
+							Vedi il calendario
 						</a>
 						<a
 							href="/contatti"
 							class="inline-flex items-center justify-center rounded-full border-2 border-black bg-white px-6 py-3 text-sm font-semibold text-black transition-all duration-300 hover:bg-black hover:text-white hover:translate-y-[-2px]"
 						>
-							Richiedi informazioni
+							Contattami
 						</a>
 					</div>
 				</div>
@@ -141,63 +206,11 @@
 		{/if}
 	</section>
 
-	<!-- Course Details -->
-	<section
-		class="mt-24"
-		use:inView
-		on:enter={() => (visible.details = true)}
-	>
-		{#if visible.details}
-			<div class="grid gap-8 lg:grid-cols-3">
-				<div class="lg:col-span-2" in:fly={{ y: 20, duration: 800 }}>
-					<h2 class="text-2xl font-light tracking-tight text-black sm:text-3xl">
-						Dettagli del <span class="font-medium">corso</span>
-					</h2>
-					<div class="mt-8 grid gap-8 sm:grid-cols-2">
-						<div class="rounded-2xl bg-white p-6 shadow-xl ring-1 ring-zinc-200">
-							<h3 class="text-lg font-medium text-black">Durata</h3>
-							<p class="mt-2 text-zinc-600">{course.duration}</p>
-						</div>
-						<div class="rounded-2xl bg-white p-6 shadow-xl ring-1 ring-zinc-200">
-							<h3 class="text-lg font-medium text-black">Prezzo</h3>
-							<p class="mt-2 text-zinc-600">€{course.price} / lezione</p>
-						</div>
-					</div>
-
-					<div class="mt-8 rounded-2xl bg-white p-6 shadow-xl ring-1 ring-zinc-200">
-						<h3 class="text-lg font-medium text-black">Requisiti</h3>
-						<ul class="mt-4 space-y-2">
-							{#each course.requirements as requirement}
-								<li class="flex items-center text-zinc-600">
-									<span class="mr-2 text-black">•</span>
-									{requirement}
-								</li>
-							{/each}
-						</ul>
-					</div>
-				</div>
-
-				<div in:fade={{ duration: 800, delay: 200 }}>
-					<div class="rounded-2xl bg-black p-6 text-white">
-						<h3 class="text-lg font-medium">Orari e frequenza</h3>
-						<p class="mt-4 text-zinc-300">{course.schedule}</p>
-						<a
-							href="/contatti"
-							class="mt-6 inline-flex w-full items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-semibold text-black transition-all duration-300 hover:bg-zinc-200"
-						>
-							Prenota ora
-						</a>
-					</div>
-				</div>
-			</div>
-		{/if}
-	</section>
-
 	<!-- Features -->
 	<section
 		class="mt-24"
-		use:inView
-		on:enter={() => (visible.features = true)}
+		use:inView={{ threshold: 0.1 }}
+		on:enter={handleEnter('features')}
 	>
 		{#if visible.features}
 			<div in:fly={{ y: 20, duration: 800 }}>
@@ -215,11 +228,24 @@
 		{/if}
 	</section>
 
+	<!-- Media Gallery -->
+	<section
+		class="mt-24"
+		use:inView={{ threshold: 0.1 }}
+		on:enter={handleEnter('media')}
+	>
+		{#if visible.media}
+			<div in:fly={{ y: 20, duration: 800 }}>
+				<MediaGallery videos={course.videos} images={course.images} />
+			</div>
+		{/if}
+	</section>
+
 	<!-- CTA -->
 	<section
 		class="mt-24"
-		use:inView
-		on:enter={() => (visible.cta = true)}
+		use:inView={{ threshold: 0.1 }}
+		on:enter={handleEnter('cta')}
 	>
 		{#if visible.cta}
 			<div class="rounded-3xl bg-black px-8 py-12 text-center sm:py-16" in:fade={{ duration: 800 }}>
@@ -231,10 +257,10 @@
 				</p>
 				<div class="mt-10 flex justify-center gap-6">
 					<a
-						href="/contatti"
+						href="/calendario"
 						class="rounded-full bg-white px-8 py-4 text-sm font-semibold text-black shadow-lg transition-all duration-300 hover:bg-zinc-100 hover:translate-y-[-2px]"
 					>
-						Prenota una lezione
+						Vedi il calendario
 					</a>
 					<a
 						href="/contatti"
@@ -247,3 +273,4 @@
 		{/if}
 	</section>
 </div>
+```

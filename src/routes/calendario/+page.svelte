@@ -1,9 +1,7 @@
 <script lang="ts">
-	import { goto } from '$app/navigation';
 	import Calendar from '$lib/components/calendar/Calendar.svelte';
 	import TrainingFilter from '$lib/components/calendar/TrainingFilter.svelte';
 	import Page from '$lib/components/Page.svelte';
-	import { onMount } from 'svelte';
 	import Seo from '$lib/components/global/Seo.svelte';
 
 	let selectedMonth = new Date().getMonth();
@@ -12,14 +10,10 @@
 
 	const trainingTypes = [
 		'Tutti',
-		'Break Dance',
-		'Parkour',
-		'Arrampicata',
 		'Verticali',
-		'Flessibilità'
+		'Movement',
+		'Parkour'
 	];
-
-	onMount(() => goto('/home'));
 </script>
 
 <Seo

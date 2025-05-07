@@ -1,16 +1,20 @@
 <script lang="ts">
 	import { fade, fly } from 'svelte/transition';
 	import Image from '../global/Image.svelte';
-	import { inView } from '$lib/actions/intersectionObserver';
+	import { inView, type InViewEventDetail } from '$lib/actions/intersectionObserver';
 	
 	let visible = false;
+
+	function handleEnter(e: CustomEvent<InViewEventDetail>) {
+		visible = true;
+	}
 </script>
 
 <section 
   class="scroll-mt-12 py-16" 
   id="about"
-  use:inView
-  on:enter={() => visible = true}
+  use:inView={{ threshold: 0.1 }}
+  on:enter={handleEnter}
 >
 	{#if visible}
 		<div class="grid grid-cols-1 items-center gap-8 lg:grid-cols-2 lg:gap-12">
