@@ -20,7 +20,7 @@
 
 <section bind:this={heroSection} class="relative min-h-[60vh] overflow-hidden lg:min-h-[90vh]">
 	<div class="grid min-h-[60vh] grid-cols-1 gap-8 lg:min-h-[90vh] lg:grid-cols-2 lg:gap-12">
-		<div in:fly={{ y: 20, duration: 800 }} class="z-10 px-4 pt-8 sm:px-6 lg:px-0 lg:pt-0">
+		<div in:fly={{ y: 20, duration: 800 }} class="z-10 px-4 pt-8 sm:px-6 lg:px-0 lg:pt-0 relative">
 			<span
 				class="mb-4 inline-flex items-center rounded-full bg-zinc-100 px-3 py-1 text-sm text-zinc-800 lg:mb-6"
 				>Online Movement Training</span
@@ -61,8 +61,7 @@
 			<div
 				class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"
 				in:fade={{ duration: 1000 }}
-			/>
+			></div>
 		</div>
 	</div>
 </section>
-```

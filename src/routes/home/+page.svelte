@@ -6,19 +6,8 @@
 	import Testimonials from '$lib/components/landing/Testimonials.svelte';
 	import CourseSlider from '$lib/components/landing/CourseSlider.svelte';
 	import Slogan from '$lib/components/landing/Slogan.svelte';
-	import { onMount } from 'svelte';
 	import Page from '$lib/components/Page.svelte';
 	import Seo from '$lib/components/global/Seo.svelte';
-
-	onMount(async () => {
-		const res = await fetch('https://bernini-admin.pages.dev/api/classes', {
-			headers: {
-				'Access-Control-Allow-Origin': '*'
-			}
-		});
-		const data = res.json();
-		console.log('aioo', data);
-	});
 </script>
 
 <Seo
@@ -31,29 +20,29 @@
 		<Hero />
 	</div>
 
-	<div class="border-t border-zinc-200" />
+	<div class="border-t border-zinc-200"></div>
 
 	<CourseSlider />
 
-	<div class="border-t border-zinc-200" />
+	<div class="border-t border-zinc-200"></div>
 
 	<div class="-mx-4 sm:-mx-6 lg:-mx-10">
 		<Slogan />
 	</div>
 
-	<div class="border-t border-zinc-200" />
+	<div class="border-t border-zinc-200"></div>
 
 	<ChiSono />
 
-	<div class="border-t border-zinc-200" />
+	<div class="border-t border-zinc-200"></div>
 
 	<LogoCloud />
 
-	<div class="border-t border-zinc-200" />
+	<div class="border-t border-zinc-200"></div>
 
 	<Testimonials />
 
-	<div class="border-t border-zinc-200" />
+	<div class="border-t border-zinc-200"></div>
 
 	<div class="py-16">
 		<Cta />
