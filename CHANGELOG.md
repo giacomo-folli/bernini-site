@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.2.0] - 2025-05-07
+
+### 🚀 Features
+
+- Update dependencies and enhance calendar components with media gallery
+
 ## [0.1.3] - 2025-05-03
 
 ### 🚀 Features
