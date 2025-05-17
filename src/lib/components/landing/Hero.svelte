@@ -5,7 +5,11 @@
 
 	let heroSection: HTMLElement;
 	let imageWrapper: HTMLElement;
+
+	let innerWidth = 0;
 </script>
+
+<svelte:window bind:innerWidth />
 
 <section bind:this={heroSection} class="relative min-h-[60vh] overflow-hidden lg:min-h-[90vh]">
 	<div class="grid min-h-[60vh] grid-cols-1 gap-8 lg:min-h-[90vh] lg:grid-cols-2 lg:gap-12">
@@ -17,11 +21,17 @@
 				class="mb-4 inline-flex items-center rounded-full bg-zinc-100 px-3 py-1 text-sm text-zinc-800 lg:mb-6"
 				>Online Movement Training</span
 			>
-			<h1 class="text-4xl font-light tracking-tight text-white sm:text-black sm:text-5xl lg:text-7xl ">
+			<h1
+				class="text-4xl font-light tracking-tight text-white sm:text-5xl sm:text-black lg:text-7xl"
+				style={innerWidth < 640 ? 'text-shadow: #000 1px 1px 5px;' : ''}
+			>
 				Move <span class="font-medium">Better.</span>
 				<br />Live <span class="font-medium">Better.</span>
 			</h1>
-			<p class="mt-4 max-w-xl text-base leading-relaxed text-white sm:text-zinc-600 lg:mt-6 lg:text-lg">
+			<p
+				class="mt-4 max-w-xl text-base leading-relaxed text-white sm:text-zinc-600 lg:mt-6 lg:text-lg"
+				style={innerWidth < 640 ? 'text-shadow: #000 1px 1px 5px;' : ''}
+			>
 				Scopri il potenziale del tuo corpo attraverso il movimento naturale. Corsi online
 				personalizzati per ogni livello.
 			</p>
