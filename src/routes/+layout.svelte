@@ -6,12 +6,26 @@
 
 	import { injectAnalytics } from '@vercel/analytics/sveltekit';
 	import { onMount } from 'svelte';
+	import { page } from '$app/stores';
 
 	let { children } = $props();
 	onMount(() => injectAnalytics());
 </script>
 
 <Seo />
+
+{#if $page.url.pathname == "/home"}
+	<div class="absolute bottom-0 top-0 block sm:hidden">
+		<img
+			alt="dd"
+			height="100%"
+			class="h-screen object-cover"
+			src={'/images/images/park-session-1.jpeg'}
+			sizes="(max-width: 640px) 640px,(max-width: 960px) 960px,1280px"
+			loading="lazy"
+		/>
+	</div>
+{/if}
 
 <Navigation />
 <main class="layout">

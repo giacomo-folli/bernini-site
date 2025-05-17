@@ -17,11 +17,11 @@
 				class="mb-4 inline-flex items-center rounded-full bg-zinc-100 px-3 py-1 text-sm text-zinc-800 lg:mb-6"
 				>Online Movement Training</span
 			>
-			<h1 class="text-4xl font-light tracking-tight text-black sm:text-5xl lg:text-7xl">
+			<h1 class="text-4xl font-light tracking-tight text-white sm:text-black sm:text-5xl lg:text-7xl ">
 				Move <span class="font-medium">Better.</span>
 				<br />Live <span class="font-medium">Better.</span>
 			</h1>
-			<p class="mt-4 max-w-xl text-base leading-relaxed text-zinc-600 lg:mt-6 lg:text-lg">
+			<p class="mt-4 max-w-xl text-base leading-relaxed text-white sm:text-zinc-600 lg:mt-6 lg:text-lg">
 				Scopri il potenziale del tuo corpo attraverso il movimento naturale. Corsi online
 				personalizzati per ogni livello.
 			</p>
@@ -41,20 +41,22 @@
 			</div>
 		</div>
 
-		<div
-			bind:this={imageWrapper}
-			use:viewportAnimate={{ animation: 'scale', delay: 200 }}
-			class="relative aspect-[4/3] w-full overflow-hidden rounded-none bg-zinc-100 shadow-2xl sm:aspect-[2/1] sm:rounded-3xl lg:aspect-auto lg:h-[90vh]"
-		>
-			<Image
-				src="/images/images/park-session-1.jpeg"
-				alt="Movement training"
-				class="h-full w-full object-cover"
-			/>
+		<div class="hidden sm:block">
 			<div
-				use:viewportAnimate={{ animation: 'fade', delay: 400 }}
-				class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"
-			></div>
+				bind:this={imageWrapper}
+				use:viewportAnimate={{ animation: 'scale', delay: 200 }}
+				class="relative aspect-[4/3] w-full overflow-hidden rounded-none bg-zinc-100 shadow-2xl sm:aspect-[2/1] sm:rounded-3xl lg:aspect-auto lg:h-[90vh]"
+			>
+				<Image
+					src="/images/images/park-session-1.jpeg"
+					alt="Movement training"
+					class="h-full w-full object-cover"
+				/>
+				<div
+					use:viewportAnimate={{ animation: 'fade', delay: 400 }}
+					class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"
+				></div>
+			</div>
 		</div>
 	</div>
 </section>
