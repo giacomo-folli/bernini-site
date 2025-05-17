@@ -4,6 +4,7 @@
 
 	import { viewportAnimate } from '$lib/actions/viewportAnimation';
 	import { journey, values } from '$lib/data/about.json';
+	import MediaGallery from '$lib/components/training/MediaGallery.svelte';
 </script>
 
 <Seo
@@ -114,19 +115,20 @@
 			</h2>
 		</div>
 
-		<div class="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-			{#each [1, 2, 3] as i}
-				<div
-					class="gallery-item group relative aspect-[4/3] overflow-hidden rounded-2xl bg-zinc-100"
-				>
-					<img
-						src="/images/images/park-session-{i}.jpeg"
-						alt="Sessione di allenamento"
-						class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-					/>
-					<div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-				</div>
-			{/each}
+		<div class="mt-16">
+			<MediaGallery
+				videos={[
+					'/videos/videos/video-assest-1.mp4',
+					'/videos/videos/video-assest-2.mp4',
+					'/videos/videos/video-assest-7.mp4',
+					'/videos/videos/video-assest-8.mp4'
+				]}
+				images={[
+					'/images/images/park-session-1.jpeg',
+					'/images/images/park-session-2.jpeg',
+					'/images/images/park-session-3.jpeg'
+				]}
+			/>
 		</div>
 	</section>
 
