@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { viewportAnimate } from '$lib/actions/viewportAnimation';
 	import { fade } from 'svelte/transition';
 
 	let formData = {
@@ -50,7 +51,7 @@
 
 <!-- <div class="grid gap-8 lg:grid-cols-2"> -->
 <div class="flex w-full flex-col gap-8 md:flex-row">
-	<div class="basis-1/3">
+	<div class="basis-1/3" use:viewportAnimate={{ animation: 'scale' }}>
 		<div class="rounded-3xl bg-zinc-900 p-8 text-white sm:p-12">
 			<h2 class="text-3xl font-light tracking-tight">
 				Hey! 👋 <span class="font-medium">Parliamo</span>
@@ -74,7 +75,10 @@
 	</div>
 
 	<div class="basis-2/3">
-		<div class="rounded-3xl bg-white p-8 shadow-xl ring-1 ring-zinc-200 sm:p-12">
+		<div
+			class="rounded-3xl bg-white p-8 shadow-xl ring-1 ring-zinc-200 sm:p-12"
+			use:viewportAnimate={{ animation: 'scale' }}
+		>
 			<h2 class="text-3xl font-light tracking-tight text-black">
 				Iniziamo a <span class="font-medium">collaborare</span>
 			</h2>

@@ -1,6 +1,8 @@
 <script lang="ts">
-	import { fade, fly } from 'svelte/transition';
+	import { viewportAnimate } from '$lib/actions/viewportAnimation';
+
 	let testimonialActive = 1;
+	let testimonialSection: HTMLElement;
 
 	const testimonials = [
 		{
@@ -18,19 +20,19 @@
 	];
 </script>
 
-<section class="relative overflow-hidden py-16">
+<section bind:this={testimonialSection} class="relative overflow-hidden py-16">
 	<div class="mx-auto max-w-7xl">
 		<div class="mx-auto max-w-2xl lg:max-w-4xl">
-			<span class="mb-6 inline-flex items-center rounded-full bg-zinc-100 px-3 py-1 text-sm text-zinc-800"
-				>Testimonianze</span
+			<span
+				use:viewportAnimate={{ animation: 'fade' }}
+				class="mb-6 inline-flex items-center rounded-full bg-zinc-100 px-3 py-1 text-sm text-zinc-800"
 			>
+				Testimonianze
+			</span>
+
 			{#each testimonials as testimonial, i}
 				{#if testimonialActive === i + 1}
-					<div
-						in:fly={{ y: 20, duration: 800 }}
-						out:fade={{ duration: 300 }}
-						class="text-center"
-					>
+					<div use:viewportAnimate={{ animation: 'slide-up' }} class="text-center">
 						<figure>
 							<blockquote class="text-2xl font-light italic leading-relaxed text-black sm:text-3xl">
 								<p>"{testimonial.text}"</p>
@@ -51,7 +53,10 @@
 				{/if}
 			{/each}
 
-			<div class="mt-10 flex justify-center gap-4">
+			<div
+				use:viewportAnimate={{ animation: 'fade', delay: 300 }}
+				class="mt-10 flex justify-center gap-4"
+			>
 				{#each testimonials as _, i}
 					<button
 						on:click={() => (testimonialActive = i + 1)}

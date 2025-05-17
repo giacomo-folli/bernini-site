@@ -2,8 +2,9 @@
 	import Cta from '$lib/components/global/Cta.svelte';
 	import Image from '$lib/components/global/Image.svelte';
 	import Seo from '$lib/components/global/Seo.svelte';
-	import { scrollAnimate } from '$lib/actions/scrollAnimation';
+
 	import { features } from '$lib/data/features.json';
+	import { viewportAnimate } from '$lib/actions/viewportAnimation';
 </script>
 
 <Seo
@@ -11,13 +12,13 @@
 	description="Scopri i nostri corsi di movimento, parkour e allenamento funzionale. Programmi personalizzati per ogni livello."
 />
 
-<div class="py-16">
+<div class="py-16" id="top">
 	<!-- Hero Section -->
 	<section class="relative">
 		<div
 			class="text-center"
 			style="opacity: 1; transform: none;"
-			use:scrollAnimate={{ animation: 'slide-up', delay: 0, threshold: 0, immediate: true }}
+			use:viewportAnimate={{ animation: 'slide-up' }}
 		>
 			<span
 				class="mb-6 inline-flex items-center rounded-full bg-zinc-100 px-3 py-1 text-sm text-zinc-800"
@@ -34,12 +35,7 @@
 
 		<div
 			class="mt-16 aspect-[2/1] w-full overflow-hidden rounded-3xl bg-zinc-100"
-			use:scrollAnimate={{
-				animation: 'slide-up',
-				delay: 0.2,
-				immediate: true,
-				duration: 5000
-			}}
+			use:viewportAnimate={{ animation: 'scale' }}
 		>
 			<Image
 				animate={true}
@@ -53,10 +49,7 @@
 
 	<!-- Features Section -->
 	<section class="mt-24">
-		<div
-			class="text-center"
-			use:scrollAnimate={{ animation: 'slide-up', delay: 100, duration: 1200 }}
-		>
+		<div class="text-center">
 			<span
 				class="mb-6 inline-flex items-center rounded-full bg-zinc-100 px-3 py-1 text-sm text-zinc-800"
 				>Le discipline</span
@@ -68,12 +61,7 @@
 
 		<div
 			class="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3"
-			use:scrollAnimate={{
-				animation: 'stagger',
-				staggerSelector: '.feature-card',
-				staggerDelay: 250,
-				threshold: 0.1
-			}}
+			use:viewportAnimate={{ animation: 'slide-up' }}
 		>
 			{#each features as feature}
 				<div
@@ -100,7 +88,7 @@
 	<section>
 		<div
 			class="mt-24 rounded-3xl bg-black p-8 text-white sm:p-12"
-			use:scrollAnimate={{ animation: 'scale', threshold: 0.1, duration: 1600 }}
+			use:viewportAnimate={{ animation: 'slide-up' }}
 		>
 			<div class="mx-auto max-w-3xl text-center">
 				<span class="mb-6 inline-flex items-center rounded-full bg-white/10 px-3 py-1 text-sm"
@@ -115,15 +103,7 @@
 				</p>
 			</div>
 
-			<div
-				class="mt-12 grid gap-8 sm:grid-cols-3"
-				use:scrollAnimate={{
-					animation: 'stagger',
-					staggerSelector: '.step-item',
-					staggerDelay: 450,
-					delay: 400
-				}}
-			>
+			<div class="mt-12 grid gap-8 sm:grid-cols-3">
 				<div class="step-item text-center">
 					<div
 						class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-white/10 text-lg font-medium"
@@ -164,10 +144,7 @@
 
 	<!-- Pricing Section -->
 	<section class="mt-24">
-		<div
-			class="text-center"
-			use:scrollAnimate={{ animation: 'slide-up', delay: 100, duration: 1200 }}
-		>
+		<div class="text-center">
 			<span
 				class="mb-6 inline-flex items-center rounded-full bg-zinc-100 px-3 py-1 text-sm text-zinc-800"
 				>Prezzi</span
@@ -177,16 +154,11 @@
 			</h2>
 		</div>
 
-		<div
-			class="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3"
-			use:scrollAnimate={{
-				animation: 'stagger',
-				staggerSelector: '.price-card',
-				staggerDelay: 300,
-				threshold: 0.1
-			}}
-		>
-			<div class="price-card rounded-2xl bg-white p-8 shadow-xl ring-1 ring-zinc-200">
+		<div class="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+			<div
+				class="price-card rounded-2xl bg-white p-8 shadow-xl ring-1 ring-zinc-200"
+				use:viewportAnimate={{ animation: 'slide-up', delay: 10 }}
+			>
 				<h3 class="text-lg font-medium text-black">Lezioni Private</h3>
 				<p class="mt-2 text-sm text-zinc-600">Allenamento personalizzato one-to-one</p>
 				<div class="mt-6">
@@ -204,7 +176,10 @@
 				</a>
 			</div>
 
-			<div class="price-card rounded-2xl bg-white p-8 shadow-xl ring-1 ring-zinc-200">
+			<div
+				class="price-card rounded-2xl bg-white p-8 shadow-xl ring-1 ring-zinc-200"
+				use:viewportAnimate={{ animation: 'slide-up', delay: 150 }}
+			>
 				<h3 class="text-lg font-medium text-black">Lezioni di Gruppo</h3>
 				<p class="mt-2 text-sm text-zinc-600">Allenati in un ambiente motivante e sociale</p>
 				<div class="mt-6">
@@ -222,7 +197,10 @@
 				</a>
 			</div>
 
-			<div class="price-card rounded-2xl bg-white p-8 shadow-xl ring-1 ring-zinc-200">
+			<div
+				class="price-card rounded-2xl bg-white p-8 shadow-xl ring-1 ring-zinc-200"
+				use:viewportAnimate={{ animation: 'slide-up', delay: 230 }}
+			>
 				<h3 class="text-lg font-medium text-black">Movement Class</h3>
 				<p class="mt-2 text-sm text-zinc-600">Esplora il movimento naturale</p>
 				<div class="mt-6">
@@ -243,11 +221,8 @@
 	</section>
 
 	<!-- FAQ Section -->
-	<section class="mt-24">
-		<div
-			class="text-center"
-			use:scrollAnimate={{ animation: 'slide-up', delay: 100, duration: 1200 }}
-		>
+	<section class="mt-24" use:viewportAnimate={{ animation: 'fade' }}>
+		<div class="text-center">
 			<span
 				class="mb-6 inline-flex items-center rounded-full bg-zinc-100 px-3 py-1 text-sm text-zinc-800"
 				>FAQ</span
@@ -257,17 +232,9 @@
 			</h2>
 		</div>
 
-		<div class="mt-16" use:scrollAnimate={{ animation: 'slide-in', delay: 200, duration: 1600 }}>
+		<div class="mt-16">
 			<div class="rounded-3xl bg-white p-8 shadow-xl ring-1 ring-zinc-200">
-				<dl
-					class="space-y-8"
-					use:scrollAnimate={{
-						animation: 'stagger',
-						staggerSelector: '.faq-item',
-						staggerDelay: 250,
-						threshold: 0.1
-					}}
-				>
+				<dl class="space-y-8">
 					{#each [1, 2, 3] as i}
 						<div class="faq-item">
 							<dt class="text-lg font-medium text-black">
@@ -287,7 +254,7 @@
 
 	<!-- CTA Section -->
 	<section class="mt-24">
-		<div use:scrollAnimate={{ animation: 'slide-up', delay: 100, threshold: 0.1, duration: 1400 }}>
+		<div>
 			<Cta />
 		</div>
 	</section>

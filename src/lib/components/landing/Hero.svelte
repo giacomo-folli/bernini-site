@@ -1,26 +1,17 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
-	import { fade, fly } from 'svelte/transition';
-	import { animate, spring } from 'motion';
+	import { viewportAnimate } from '$lib/actions/viewportAnimation';
 	import Image from '../global/Image.svelte';
 
 	let heroSection: HTMLElement;
 	let imageWrapper: HTMLElement;
-
-	onMount(() => {
-		animate(heroSection, { opacity: [0, 1], y: [20, 0] }, { duration: 0.8, easing: spring() });
-
-		animate(
-			imageWrapper,
-			{ scale: [0.95, 1], opacity: [0, 1] },
-			{ duration: 0.8, delay: 0.2, easing: spring() }
-		);
-	});
 </script>
 
 <section bind:this={heroSection} class="relative min-h-[60vh] overflow-hidden lg:min-h-[90vh]">
 	<div class="grid min-h-[60vh] grid-cols-1 gap-8 lg:min-h-[90vh] lg:grid-cols-2 lg:gap-12">
-		<div in:fly={{ y: 20, duration: 800 }} class="z-10 px-4 pt-8 sm:px-6 lg:px-0 lg:pt-0 relative">
+		<div
+			use:viewportAnimate={{ animation: 'slide-up' }}
+			class="relative z-10 px-4 pt-8 sm:px-6 lg:px-0 lg:pt-0"
+		>
 			<span
 				class="mb-4 inline-flex items-center rounded-full bg-zinc-100 px-3 py-1 text-sm text-zinc-800 lg:mb-6"
 				>Online Movement Training</span
@@ -51,6 +42,7 @@
 
 		<div
 			bind:this={imageWrapper}
+			use:viewportAnimate={{ animation: 'scale', delay: 200 }}
 			class="relative aspect-[4/3] w-full overflow-hidden rounded-none bg-zinc-100 shadow-2xl sm:aspect-[2/1] sm:rounded-3xl lg:aspect-auto lg:h-[90vh]"
 		>
 			<Image
@@ -59,8 +51,8 @@
 				class="h-full w-full object-cover"
 			/>
 			<div
+				use:viewportAnimate={{ animation: 'fade', delay: 400 }}
 				class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"
-				in:fade={{ duration: 1000 }}
 			></div>
 		</div>
 	</div>

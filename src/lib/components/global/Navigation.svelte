@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onNavigate } from '$app/navigation';
 	import { page } from '$app/stores';
-	import { fade, slide } from 'svelte/transition';
+	import { slide } from 'svelte/transition';
 
 	let open = false;
 
@@ -26,7 +26,7 @@
 		<div class="flex items-center justify-between">
 			<a
 				class="text-xl font-medium tracking-tighter text-black transition-colors hover:text-black/70"
-				href="/"
+				href="/#"
 				title="link to main page"
 			>
 				Francesco Bernini
@@ -50,7 +50,7 @@
 
 				<div class="flex items-center gap-4">
 					<a
-						href="/contatti#form"
+						href="/contatti"
 						class="hidden rounded-full bg-black px-6 py-2.5 text-sm font-medium text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-zinc-800 md:block"
 					>
 						Scrivimi
@@ -105,7 +105,7 @@
 					{/each}
 					<li class="pt-6">
 						<a
-							href="/contatti#form"
+							href="/contatti"
 							class="inline-flex w-full items-center justify-center rounded-full bg-black px-6 py-2.5 text-base font-medium text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-zinc-800"
 						>
 							Scrivimi
@@ -118,4 +118,4 @@
 </div>
 
 <!-- Add padding to prevent content from hiding under fixed header -->
-<div class="h-4" />
+<div class="h-4"></div>

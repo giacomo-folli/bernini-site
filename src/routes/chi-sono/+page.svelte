@@ -1,7 +1,8 @@
 <script lang="ts">
 	import Cta from '$lib/components/global/Cta.svelte';
 	import Seo from '$lib/components/global/Seo.svelte';
-	import { scrollAnimate } from '$lib/actions/scrollAnimation';
+
+	import { viewportAnimate } from '$lib/actions/viewportAnimation';
 
 	const journey = [
 		{
@@ -60,7 +61,7 @@
 		<div
 			class="text-center"
 			style="opacity: 1; transform: none;"
-			use:scrollAnimate={{ animation: 'slide-up', delay: 0, threshold: 0, immediate: true }}
+			use:viewportAnimate={{ animation: 'slide-up' }}
 		>
 			<span
 				class="mb-6 inline-flex items-center rounded-full bg-zinc-100 px-3 py-1 text-sm text-zinc-800"
@@ -77,22 +78,13 @@
 
 		<div
 			class="mt-16 aspect-[2/1] w-full overflow-hidden rounded-3xl bg-zinc-100"
-			use:scrollAnimate={{
-				animation: 'slide-up',
-				duration: 2000,
-				delay: 0.2,
-				immediate: true
-			}}
+			use:viewportAnimate={{ animation: 'slide-up', delay: 180 }}
 		>
 			<img
+				use:viewportAnimate={{ animation: 'fade' }}
 				src="/images/images/park-session-2.jpeg"
 				alt="Francesco durante una sessione di allenamento"
 				class="h-full w-full object-cover"
-				use:scrollAnimate={{
-					animation: 'fade',
-					immediate: true,
-					duration: 5000
-				}}
 			/>
 			<div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
 		</div>
@@ -101,7 +93,7 @@
 	<!-- Journey Section -->
 	<section class="mt-24">
 		<div class="grid gap-12 lg:grid-cols-2">
-			<div use:scrollAnimate={{ animation: 'slide-up', delay: 100 }}>
+			<div>
 				<span
 					class="mb-6 inline-flex items-center rounded-full bg-zinc-100 px-3 py-1 text-sm text-zinc-800"
 					>Il mio percorso</span
@@ -115,18 +107,12 @@
 				</p>
 			</div>
 
-			<div
-				class="space-y-8"
-				use:scrollAnimate={{
-					animation: 'stagger',
-					staggerSelector: '.journey-item',
-					staggerDelay: 120,
-					delay: 200,
-					threshold: 0.1
-				}}
-			>
-				{#each journey as { year, title, description }}
-					<div class="journey-item rounded-2xl bg-white p-6 shadow-xl ring-1 ring-zinc-200">
+			<div class="space-y-8">
+				{#each journey as { year, title, description }, i}
+					<div
+						class="journey-item rounded-2xl bg-white p-6 shadow-xl ring-1 ring-zinc-200"
+						use:viewportAnimate={{ animation: 'scale', delay: 100 * i }}
+					>
 						<div class="flex items-baseline justify-between">
 							<h3 class="text-lg font-medium text-black">{title}</h3>
 							<span class="text-sm text-zinc-500">{year}</span>
@@ -139,8 +125,8 @@
 	</section>
 
 	<!-- Values Section -->
-	<section class="mt-24">
-		<div class="text-center" use:scrollAnimate={{ animation: 'slide-up', delay: 100 }}>
+	<section class="mt-24" use:viewportAnimate={{ animation: 'scale' }}>
+		<div class="text-center">
 			<span
 				class="mb-6 inline-flex items-center rounded-full bg-zinc-100 px-3 py-1 text-sm text-zinc-800"
 				>I miei valori</span
@@ -150,15 +136,7 @@
 			</h2>
 		</div>
 
-		<div
-			class="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3"
-			use:scrollAnimate={{
-				animation: 'stagger',
-				staggerSelector: '.value-item',
-				staggerDelay: 120,
-				threshold: 0.1
-			}}
-		>
+		<div class="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
 			{#each values as { title, description }}
 				<div class="value-item rounded-2xl bg-white p-6 shadow-xl ring-1 ring-zinc-200">
 					<h3 class="text-lg font-medium text-black">{title}</h3>
@@ -169,8 +147,8 @@
 	</section>
 
 	<!-- Gallery Section -->
-	<section class="mt-24">
-		<div class="text-center" use:scrollAnimate={{ animation: 'slide-up', delay: 100 }}>
+	<section class="mt-24" use:viewportAnimate={{ animation: 'scale' }}>
+		<div class="text-center">
 			<span
 				class="mb-6 inline-flex items-center rounded-full bg-zinc-100 px-3 py-1 text-sm text-zinc-800"
 				>Galleria</span
@@ -180,16 +158,7 @@
 			</h2>
 		</div>
 
-		<div
-			class="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3"
-			use:scrollAnimate={{
-				animation: 'stagger',
-				staggerSelector: '.gallery-item',
-				staggerDelay: 150,
-				delay: 200,
-				threshold: 0.1
-			}}
-		>
+		<div class="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
 			{#each [1, 2, 3] as i}
 				<div
 					class="gallery-item group relative aspect-[4/3] overflow-hidden rounded-2xl bg-zinc-100"
@@ -199,7 +168,7 @@
 						alt="Sessione di allenamento"
 						class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
 					/>
-					<div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+					<div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
 				</div>
 			{/each}
 		</div>

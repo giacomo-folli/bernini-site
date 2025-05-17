@@ -1,5 +1,5 @@
 <script lang="ts">
-	let { id }: { id: string } = $props();
+	export let id: string = '';
 </script>
 
 <div {id} class="w-full py-4">

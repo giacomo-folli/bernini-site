@@ -4,7 +4,8 @@
 	import Map from '$lib/components/contact/Map.svelte';
 	import Newsletter from '$lib/components/contact/Newsletter.svelte';
 	import Seo from '$lib/components/global/Seo.svelte';
-	import { scrollAnimate } from '$lib/actions/scrollAnimation';
+
+	import { viewportAnimate } from '$lib/actions/viewportAnimation';
 </script>
 
 <Seo
@@ -14,12 +15,8 @@
 
 <div class="py-16">
 	<!-- Hero Section -->
-	<section class="relative">
-		<div
-			class="text-center"
-			style="opacity: 1; transform: none;"
-			use:scrollAnimate={{ animation: 'slide-up', delay: 0, threshold: 0, immediate: true }}
-		>
+	<section class="relative" use:viewportAnimate={{ animation: 'fade' }}>
+		<div class="text-center" style="opacity: 1; transform: none;">
 			<span
 				class="mb-6 inline-flex items-center rounded-full bg-zinc-100 px-3 py-1 text-sm text-zinc-800"
 				>Parliamo</span
@@ -39,7 +36,7 @@
 		<div class="grid gap-8 lg:grid-cols-2">
 			<div
 				class="rounded-3xl bg-white p-8 shadow-xl ring-1 ring-zinc-200 sm:p-12"
-				use:scrollAnimate={{ animation: 'scale', delay: 0.1, duration: 1600 }}
+				use:viewportAnimate={{ animation: 'scale' }}
 			>
 				<h2 class="text-2xl font-light tracking-tight text-black">
 					Dove mi puoi <span class="font-medium">trovare</span>
@@ -48,14 +45,7 @@
 					<ContactInfo />
 				</div>
 
-				<div
-					class="mt-12 space-y-8"
-					use:scrollAnimate={{
-						animation: 'stagger',
-						duration: 1600,
-						delay: 0.3
-					}}
-				>
+				<div class="mt-12 space-y-8">
 					<div class="info-item">
 						<h3 class="text-lg font-medium text-black">Orari</h3>
 						<dl class="mt-4 space-y-2">
@@ -96,8 +86,8 @@
 			</div>
 
 			<div
-				class="rounded-3xl bg-white p-8 shadow-xl ring-1 ring-zinc-200 sm:p-12"
-				use:scrollAnimate={{ animation: 'scale', delay: 0.2, duration: 1800 }}
+				class="rounded-3xl bg-white p-6 shadow-xl ring-1 ring-zinc-200 sm:p-12"
+				use:viewportAnimate={{ animation: 'scale' }}
 			>
 				<Map />
 			</div>
@@ -105,11 +95,8 @@
 	</section>
 
 	<!-- Contact Form Section -->
-	<section id="form" class="mt-16">
-		<div
-			class="rounded-3xl bg-white p-8 shadow-xl ring-1 ring-zinc-200 sm:p-12"
-			use:scrollAnimate={{ animation: 'slide-up', delay: 0.1, threshold: 0.1, duration: 1600 }}
-		>
+	<section id="form" class="mt-16" use:viewportAnimate={{ animation: 'fade' }}>
+		<div class="rounded-3xl bg-white p-6 shadow-xl ring-1 ring-zinc-200 sm:p-12">
 			<div class="mx-auto">
 				<h2 class="text-2xl font-light tracking-tight text-black">
 					Mandami un <span class="font-medium">messaggio</span>
@@ -127,7 +114,7 @@
 
 	<!-- Newsletter Section -->
 	<section class="mt-16">
-		<div use:scrollAnimate={{ animation: 'slide-up', threshold: 0.1, duration: 1600 }}>
+		<div>
 			<Newsletter />
 		</div>
 	</section>

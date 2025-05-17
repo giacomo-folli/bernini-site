@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { scrollAnimate } from '$lib/actions/scrollAnimation';
 	import { optimize } from '$lib/utils/image';
 
 	let clazz: string = '';
@@ -13,13 +12,7 @@
 </script>
 
 {#if animate}
-	<div
-		use:scrollAnimate={{
-			animation: 'fade',
-			immediate: true,
-			duration: 5000
-		}}
-	>
+	<div>
 		<img
 			{alt}
 			{width}
