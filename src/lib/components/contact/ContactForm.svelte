@@ -49,7 +49,7 @@
 </script>
 
 <!-- <div class="grid gap-8 lg:grid-cols-2"> -->
-<div class="flex w-full flex-col gap-8 border md:flex-row">
+<div class="flex w-full flex-col gap-8 md:flex-row">
 	<div class="basis-1/3">
 		<div class="rounded-3xl bg-zinc-900 p-8 text-white sm:p-12">
 			<h2 class="text-3xl font-light tracking-tight">
@@ -127,7 +127,7 @@
 						rows="4"
 						placeholder="Come posso aiutarti?"
 						class="mt-2 block w-full rounded-lg border-zinc-300 px-4 py-3 text-black shadow-sm placeholder:text-zinc-400 focus:border-black focus:ring-black sm:text-sm"
-					/>
+					></textarea>
 				</div>
 
 				<div class="flex items-start">

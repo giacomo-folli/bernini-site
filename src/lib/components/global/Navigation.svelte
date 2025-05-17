@@ -11,9 +11,7 @@
 		{ url: '/contatti', title: 'Contatti' }
 	];
 
-	$: selected = (url: string) => {
-		return $page.url.pathname === url;
-	};
+	$: selected = (url: string) => $page.url.pathname === url;
 
 	onNavigate(() => {
 		open = false;
