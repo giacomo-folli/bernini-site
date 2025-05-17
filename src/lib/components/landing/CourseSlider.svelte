@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { viewportAnimate } from '$lib/actions/viewportAnimation';
+	import { Pages } from '$lib/enums';
 	import Image from '../global/Image.svelte';
 
 	const courses = [
@@ -120,7 +121,7 @@
 
 							<div class="mt-4 sm:mt-6">
 								<a
-									href="/corsi/{course.slug}"
+									href="{Pages.COURSES}/{course.slug}"
 									class="inline-flex w-full items-center justify-center rounded-full bg-black px-4 py-2.5 text-sm font-semibold text-white shadow-lg transition-all duration-300 hover:bg-zinc-800"
 								>
 									Scopri il corso

@@ -1,6 +1,8 @@
-<section
-	class="h-full justify-between rounded-3xl bg-white p-8 lg:col-span-1"
->
+<script lang="ts">
+	import { Pages } from '$lib/enums';
+</script>
+
+<section class="h-full justify-between rounded-3xl bg-white p-8 lg:col-span-1">
 	<div class="flex h-full flex-col justify-between">
 		<div>
 			<div class="flex flex-col lg:flex-row lg:items-center lg:justify-between">
@@ -13,7 +15,7 @@
 		</div>
 		<div class="mt-4 flex flex-col">
 			<a
-				href="/calendario"
+				href={Pages.CALENDAR}
 				class="flex h-10 items-center justify-between rounded-full border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-500 shadow-zinc-500/5 ring-offset-zinc-200 transition-all duration-300 hover:bg-black hover:text-white focus:ring-2 focus:ring-blue-950 focus:ring-offset-2"
 			>
 				Prenota

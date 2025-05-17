@@ -1,14 +1,15 @@
 <script lang="ts">
 	import { onNavigate } from '$app/navigation';
 	import { page } from '$app/stores';
+	import { Pages } from '$lib/enums';
 	import { slide } from 'svelte/transition';
 
 	let open = false;
 
 	const hrefs = [
-		{ url: '/come-funziona', title: 'Classi' },
-		{ url: '/chi-sono', title: 'La mia storia' },
-		{ url: '/contatti', title: 'Contatti' }
+		{ url: Pages.CLASSES, title: 'Classi' },
+		{ url: Pages.ABOUT, title: 'La mia storia' },
+		{ url: Pages.CONTACTS, title: 'Contatti' }
 	];
 
 	$: selected = (url: string) => $page.url.pathname === url;
@@ -26,7 +27,7 @@
 		<div class="flex items-center justify-between">
 			<a
 				class="text-xl font-medium tracking-tighter text-black transition-colors hover:text-black/70"
-				href="/#"
+				href={Pages.HOME}
 				title="link to main page"
 			>
 				Francesco Bernini
@@ -50,7 +51,7 @@
 
 				<div class="flex items-center gap-4">
 					<a
-						href="/contatti"
+						href={Pages.CONTACTS}
 						class="hidden rounded-full bg-black px-6 py-2.5 text-sm font-medium text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-zinc-800 md:block"
 					>
 						Scrivimi
@@ -105,7 +106,7 @@
 					{/each}
 					<li class="pt-6">
 						<a
-							href="/contatti"
+							href={Pages.CONTACTS}
 							class="inline-flex w-full items-center justify-center rounded-full bg-black px-6 py-2.5 text-base font-medium text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-zinc-800"
 						>
 							Scrivimi

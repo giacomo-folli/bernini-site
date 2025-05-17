@@ -4,6 +4,7 @@
 	import Seo from '$lib/components/global/Seo.svelte';
 	import MediaGallery from '$lib/components/training/MediaGallery.svelte';
 	import { courses } from '$lib/data/courses.json';
+	import { Pages } from '$lib/enums';
 
 	// @ts-ignore
 	$: course = courses[$page.params.slug];
@@ -54,13 +55,13 @@
 
 				<div class="mt-8 flex flex-col gap-4 sm:flex-row">
 					<a
-						href="/calendario"
+						href={Pages.CALENDAR}
 						class="inline-flex items-center justify-center rounded-full bg-black px-6 py-3 text-sm font-semibold text-white shadow-lg transition-all duration-300 hover:translate-y-[-2px] hover:bg-zinc-800"
 					>
 						Vedi il calendario
 					</a>
 					<a
-						href="/contatti"
+						href={Pages.CONTACTS}
 						class="inline-flex items-center justify-center rounded-full border-2 border-black bg-white px-6 py-3 text-sm font-semibold text-black transition-all duration-300 hover:translate-y-[-2px] hover:bg-black hover:text-white"
 					>
 						Contattami
@@ -111,13 +112,13 @@
 			</p>
 			<div class="mt-10 flex justify-center gap-6">
 				<a
-					href="/calendario"
+					href={Pages.CALENDAR}
 					class="rounded-full bg-white px-8 py-4 text-sm font-semibold text-black shadow-lg transition-all duration-300 hover:translate-y-[-2px] hover:bg-zinc-100"
 				>
 					Vedi il calendario
 				</a>
 				<a
-					href="/contatti"
+					href={Pages.CONTACTS}
 					class="rounded-full border border-white/25 px-8 py-4 text-sm font-semibold text-white shadow-lg transition-all duration-300 hover:translate-y-[-2px] hover:bg-white/10"
 				>
 					Contattaci

@@ -1,14 +1,25 @@
-<footer class="mt-2 sm:mt-4 pb-6">
+<script>
+	import { Pages } from '$lib/enums';
+</script>
+
+<footer class="mt-2 pb-6 sm:mt-4">
 	<div class="mx-auto w-full sm:px-6 lg:px-8 xl:px-0" style="max-width: min(100%, 90rem)">
-		<nav class="flex flex-col items-center gap-6 sm:flex-row sm:justify-center sm:gap-12" aria-label="Footer">
+		<nav
+			class="flex flex-col items-center gap-6 sm:flex-row sm:justify-center sm:gap-12"
+			aria-label="Footer"
+		>
 			<div>
-				<a href="/come-funziona" class="text-sm leading-6 text-zinc-600 hover:text-black">Classi</a>
+				<a href={Pages.CLASSES} class="text-sm leading-6 text-zinc-600 hover:text-black">Classi</a>
 			</div>
 			<div>
-				<a href="/chi-sono" class="text-sm leading-6 text-zinc-600 hover:text-black">La mia storia</a>
+				<a href={Pages.ABOUT} class="text-sm leading-6 text-zinc-600 hover:text-black"
+					>La mia storia</a
+				>
 			</div>
 			<div>
-				<a href="/contatti" class="text-sm leading-6 text-zinc-600 hover:text-black">Contatti</a>
+				<a href={Pages.CONTACTS} class="text-sm leading-6 text-zinc-600 hover:text-black"
+					>Contatti</a
+				>
 			</div>
 		</nav>
 

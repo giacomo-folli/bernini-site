@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { viewportAnimate } from '$lib/actions/viewportAnimation';
+	import { Pages } from '$lib/enums';
 	import Image from '../global/Image.svelte';
 
 	let heroSection: HTMLElement;
@@ -26,13 +27,13 @@
 			</p>
 			<div class="mt-6 flex flex-col gap-4 sm:flex-row lg:mt-10">
 				<a
-					href="/calendario"
+					href={Pages.CALENDAR}
 					class="inline-flex items-center justify-center rounded-full bg-black px-6 py-3 text-sm font-semibold text-white shadow-lg transition-all duration-300 hover:translate-y-[-2px] hover:bg-zinc-800"
 				>
 					Vedi il calendario
 				</a>
 				<a
-					href="/contatti"
+					href={Pages.CONTACTS}
 					class="inline-flex items-center justify-center rounded-full border-2 border-black bg-white px-6 py-3 text-sm font-semibold text-black transition-all duration-300 hover:translate-y-[-2px] hover:bg-black hover:text-white"
 				>
 					Contattami

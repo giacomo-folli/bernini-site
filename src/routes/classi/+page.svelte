@@ -5,6 +5,7 @@
 
 	import { features } from '$lib/data/features.json';
 	import { viewportAnimate } from '$lib/actions/viewportAnimation';
+	import { Pages } from '$lib/enums';
 </script>
 
 <Seo
@@ -169,7 +170,7 @@
 					<p class="mt-2 text-xs text-zinc-500">Prima lezione gratuita!</p>
 				</div>
 				<a
-					href="/contatti"
+					href={Pages.CONTACTS}
 					class="mt-8 block rounded-full bg-black px-6 py-3 text-center text-sm font-semibold text-white transition-all hover:bg-zinc-800"
 				>
 					Prenota ora
@@ -190,7 +191,7 @@
 					<p class="mt-2 text-xs text-zinc-500">Minimo 4 partecipanti</p>
 				</div>
 				<a
-					href="/contatti"
+					href={Pages.CONTACTS}
 					class="mt-8 block rounded-full bg-black px-6 py-3 text-center text-sm font-semibold text-white transition-all hover:bg-zinc-800"
 				>
 					Prenota ora
@@ -211,7 +212,7 @@
 					<p class="mt-2 text-xs text-zinc-500">Pacchetto 10 lezioni: €120</p>
 				</div>
 				<a
-					href="/contatti"
+					href={Pages.CONTACTS}
 					class="mt-8 block rounded-full bg-black px-6 py-3 text-center text-sm font-semibold text-white transition-all hover:bg-zinc-800"
 				>
 					Prenota ora

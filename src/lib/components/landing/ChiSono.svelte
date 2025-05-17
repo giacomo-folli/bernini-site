@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { viewportAnimate } from '$lib/actions/viewportAnimation';
+	import { Pages } from '$lib/enums';
 	import Image from '../global/Image.svelte';
 </script>
 
@@ -28,7 +29,7 @@
 			</div>
 			<div class="mt-6 lg:mt-8">
 				<a
-					href="/chi-sono"
+					href={Pages.ABOUT}
 					class="inline-flex items-center justify-center rounded-full border border-zinc-200 bg-white px-6 py-3 text-sm font-semibold text-zinc-900 transition-all hover:border-black hover:shadow-lg"
 				>
 					Scopri di più
