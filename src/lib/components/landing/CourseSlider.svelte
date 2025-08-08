@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { viewportAnimate } from '$lib/actions/viewportAnimation';
-	import { Pages } from '$lib/enums';
+	import { Images, Pages } from '$lib/enums';
 	import Image from '../global/Image.svelte';
 
 	const courses = [
@@ -21,7 +21,7 @@
 			students: '29',
 			description:
 				'Esplora il movimento naturale attraverso parkour, break dance e movimento libero.',
-			image: '/images/images/park-session-4.jpeg',
+			image: Images.MOVEMENT_CARD,
 			slug: 'movement'
 		},
 		{
@@ -74,7 +74,7 @@
 							<Image
 								src={course.image}
 								alt={course.title}
-								class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+								class="h-full w-full object-cover object-bottom transition-transform duration-300 group-hover:scale-105"
 							/>
 							<div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
 						</div>

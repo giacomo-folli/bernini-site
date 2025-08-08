@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { viewportAnimate } from '$lib/actions/viewportAnimation';
-	import { Pages } from '$lib/enums';
+	import { Images, Pages } from '$lib/enums';
 	import Image from '../global/Image.svelte';
 
 	let heroSection: HTMLElement;
@@ -58,9 +58,9 @@
 				class="relative aspect-[4/3] w-full overflow-hidden rounded-none bg-zinc-100 shadow-2xl sm:aspect-[2/1] sm:rounded-3xl lg:aspect-auto lg:h-[90vh]"
 			>
 				<Image
-					src="/images/images/park-session-1.jpeg"
+					src={Images.HERO_HOME}
 					alt="Movement training"
-					class="h-full w-full object-cover"
+					class="h-full w-full object-cover object-bottom"
 				/>
 				<div
 					use:viewportAnimate={{ animation: 'fade', delay: 400 }}
