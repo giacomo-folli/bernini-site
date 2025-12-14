@@ -5,12 +5,19 @@
 	import { goto } from '$app/navigation';
 
 	let { children } = $props();
-	
+
 	async function handleLogout() {
-        logout()
-		goto("/auth/logout")
+		logout();
+		goto('/auth/logout');
 	}
-	</script>
+
+	const pages: Record<string, string> = {
+		'/': 'Home',
+		'/settings': 'Settings',
+		'/courses': 'Courses',
+		'/posts': 'Posts'
+	};
+</script>
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
@@ -19,10 +26,9 @@
 {#if $session.isAuthenticated}
 	<div class="flex w-full justify-between border p-2">
 		<ul class="flex gap-4 underline">
-		    <li><a href="/">Home</a></li>
-			<li><a href="/settings">Settings</a></li>
-			<li><a href="/users">Users</a></li>
-			<li><a href="/posts">Posts</a></li>
+			{#each Object.keys(pages) as page}
+				<li><a href={page}>{pages[page]}</a></li>
+			{/each}
 		</ul>
 		<ul>
 			<li><button onclick={handleLogout}>Logout</button></li>
@@ -30,4 +36,6 @@
 	</div>
 {/if}
 
-{@render children()}
+<div class="mx-auto max-w-[90vw] p-4">
+	{@render children()}
+</div>

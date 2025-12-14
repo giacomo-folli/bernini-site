@@ -1,13 +1,12 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 	import { fade, fly } from 'svelte/transition';
-	import Seo from '$lib/components/global/Seo.svelte';
-	import MediaGallery from '$lib/components/training/MediaGallery.svelte';
-	import { courses } from '$lib/data/courses.json';
-	import { Pages } from '$lib/enums';
-	import { viewportAnimate } from '$lib/actions/viewportAnimation';
+	import Seo from '../../../lib/components/global/Seo.svelte';
+	import MediaGallery from '../../../lib/components/training/MediaGallery.svelte';
+	import { Pages } from '../../../lib/enums';
+	import { viewportAnimate } from '../../../lib/actions/viewportAnimation';
+	import { courses } from '../../../lib/data/courses.json';
 
-	// @ts-ignore
 	$: course = courses[$page.params.slug];
 </script>
 
