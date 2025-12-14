@@ -1,6 +1,8 @@
 <script lang="ts">
+	import { Edit } from 'lucide-svelte';
 	import type { Course } from '$lib/types/courses';
 	import { onMount } from 'svelte';
+	import { goto } from '$app/navigation';
 
 	let courses: Course[] = $state([]);
 
@@ -36,16 +38,16 @@
 	<tbody>
 		{#each courses as course, i}
 			<tr>
-				<td class="border border-gray-300 px-4 py-2">{i}</td>
+				<td class="border border-gray-300 px-4 py-2"> {i}</td>
 				<td class="border border-gray-300 px-4 py-2">{course.title}</td>
 				<td class="border border-gray-300 px-4 py-2">{course.description}</td>
 				<td class="border border-gray-300 px-4 py-2">{course.price}</td>
 				<td class="border border-gray-300 px-4 py-2">
 					<button
-						class="rounded bg-red-500 px-2 py-1 text-white"
-						onclick={() => deleteCourse(course.title)}
+						class="rounded bg-blue-500 px-1 py-1 text-white hover:cursor-pointer"
+						onclick={() => goto(`/courses/${course.title?.toLowerCase()}`)}
 					>
-						Delete
+						<Edit />
 					</button>
 				</td>
 			</tr>

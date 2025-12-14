@@ -56,7 +56,7 @@
 					<td class="border border-gray-300 px-4 py-2">
 						<button
 							class="mr-2 rounded bg-yellow-500 px-2 py-1 text-white"
-							onclick={() => goto(`/posts/edit/${post.id}`)}
+							onclick={() => goto(`/posts/${post.id}`)}
 						>
 							Edit
 						</button>

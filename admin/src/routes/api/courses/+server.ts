@@ -25,7 +25,7 @@ export const POST: RequestHandler = async ({ request }) => {
 
 // PUT /api/users/:id - Update an existing user
 export const PUT: RequestHandler = async ({ request, params }) => {
-	// const id = Number(params.id);
+	console.log(params)
 	// const { name, email } = await request.json();
 	// const userIndex = users.findIndex((user) => user.id === id);
 
