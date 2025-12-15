@@ -26,6 +26,13 @@
 </script>
 
 <h1 class="mb-4 text-2xl font-bold">Course Management</h1>
+
+<div class="ml-auto w-fit">
+	<button class="mb-4 rounded bg-blue-500 px-4 py-2 text-white hover:cursor-pointer" onclick={() => goto('/courses/new')}>
+		Create New Course
+	</button>
+</div>
+
 <table class="w-full table-auto border-collapse border border-gray-300">
 	<thead>
 		<tr>
