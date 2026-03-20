@@ -81,3 +81,20 @@
 		scroll-behavior: smooth !important;
 	}
 }
+
+@layer utilities {
+	.material-symbols-outlined {
+		font-variation-settings:
+			'FILL' 0,
+			'wght' 400,
+			'GRAD' 0,
+			'opsz' 24;
+	}
+	.glass-nav {
+		backdrop-filter: blur(20px);
+		-webkit-backdrop-filter: blur(20px);
+	}
+	.editorial-shadow {
+		box-shadow: 0px 20px 40px rgba(28, 27, 27, 0.06);
+	}
+}

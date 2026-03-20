@@ -48,7 +48,7 @@
 				<div class="mt-6" use:viewportAnimate={{ animation: 'slide-up', delay: 200 }}>
 					<span class="font-medium text-black">Requisiti:</span>
 					<ul class="mt-2 list-inside list-disc space-y-1 text-sm text-zinc-600">
-						{#each course.requirements as requirement}
+						{#each course?.requirements || [] as requirement}
 							<li>{requirement}</li>
 						{/each}
 					</ul>
@@ -94,7 +94,7 @@
 				Cosa <span class="font-medium">imparerai</span>
 			</h2>
 			<div class="mt-8 grid gap-4 sm:grid-cols-2">
-				{#each course.features as feature}
+				{#each course?.features || [] as feature}
 					<div class="rounded-2xl bg-white p-6 shadow-xl ring-1 ring-zinc-200">
 						<p class="text-zinc-600">{feature}</p>
 					</div>

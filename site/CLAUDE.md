@@ -45,6 +45,7 @@ npm run lint
 ### Project Structure
 
 - `/src/lib/components/` - Reusable components organized by section:
+
   - `about/` - Components for the about page
   - `calendar/` - Calendar related components
   - `contact/` - Contact form and information components

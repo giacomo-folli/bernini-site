@@ -1,11 +1,7 @@
 <div class="mt-16">
 	<h2 class="text-xl font-medium text-black">Il tuo trainer</h2>
 	<div class="mt-6 flex items-start gap-6">
-		<img
-			src="/profile.jpg"
-			alt="Francesco Bernini"
-			class="h-16 w-16 rounded-full object-cover"
-		/>
+		<img src="/profile.jpg" alt="Francesco Bernini" class="h-16 w-16 rounded-full object-cover" />
 		<div>
 			<h3 class="font-medium text-black">Francesco Bernini</h3>
 			<p class="mt-2 text-sm text-zinc-600">

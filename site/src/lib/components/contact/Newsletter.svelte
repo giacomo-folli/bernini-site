@@ -1,6 +1,7 @@
 <div class="overflow-hidden rounded-3xl bg-black px-8 py-24 shadow-2xl">
 	<div class="mx-auto max-w-2xl text-center">
-		<span class="mb-6 inline-flex items-center rounded-full bg-white/10 px-3 py-1 text-sm text-white"
+		<span
+			class="mb-6 inline-flex items-center rounded-full bg-white/10 px-3 py-1 text-sm text-white"
 			>Newsletter</span
 		>
 		<h2 class="text-3xl font-light tracking-tight text-white sm:text-4xl">
@@ -20,7 +21,7 @@
 				/>
 				<button
 					type="submit"
-					class="flex-none rounded-full bg-white px-6 py-3 text-sm font-semibold text-black shadow-lg transition-all duration-300 hover:bg-zinc-100 hover:translate-y-[-2px]"
+					class="flex-none rounded-full bg-white px-6 py-3 text-sm font-semibold text-black shadow-lg transition-all duration-300 hover:translate-y-[-2px] hover:bg-zinc-100"
 				>
 					Iscriviti
 				</button>

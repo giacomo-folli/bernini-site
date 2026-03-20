@@ -2,32 +2,23 @@
 	import { viewportAnimate } from '$lib/actions/viewportAnimation';
 </script>
 
-<section class="relative overflow-hidden">
-	<div class="relative pb-10 pt-12 md:rounded">
-		<div class="absolute inset-0 bg-black">
-			<div
-				class="absolute inset-0 opacity-20"
-				style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23FFFFFF\' fill-opacity=\'0.4\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"
-			></div>
-		</div>
-
-		<div class="relative mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-			<div
-				use:viewportAnimate={{ animation: 'fade', threshold: 0.05 }}
-				class="mx-auto max-w-3xl text-center"
-			>
-				<span
-					class="mb-8 inline-flex items-center rounded-full bg-white/10 px-3 py-1 text-sm text-white"
-					>La mia filosofia</span
-				>
-
-				<h2 class="text-2xl font-light italic tracking-tight text-white sm:text-4xl lg:text-5xl">
-					"Il movimento è la chiave per sbloccare il tuo potenziale. Ogni passo è un'opportunità per
-					crescere, imparare e trasformarsi."
-				</h2>
-
-				<p class="text-md mt-12 font-medium text-zinc-300">Francesco Bernini</p>
-			</div>
-		</div>
+<section class="bg-surface py-40">
+	<div
+		use:viewportAnimate={{ animation: 'fade', threshold: 0.05 }}
+		class="mx-auto max-w-4xl px-8 text-center"
+	>
+		<span
+			class="material-symbols-outlined mb-12 text-4xl text-primary"
+			style="font-variation-settings: 'FILL' 1;">format_quote</span
+		>
+		<blockquote
+			class="mb-12 font-headline text-3xl italic leading-tight text-on-surface md:text-5xl"
+		>
+			"Il movimento è la chiave per sbloccare il tuo potenziale. Ogni passo è un'opportunità per
+			crescere, imparare e trasformarsi."
+		</blockquote>
+		<cite class="font-label text-sm uppercase not-italic tracking-widest text-secondary"
+			>— Francesco Bernini</cite
+		>
 	</div>
 </section>

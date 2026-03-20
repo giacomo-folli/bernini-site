@@ -19,12 +19,15 @@ Unisco la potenza del primal movement, la forza del calisthenics, la libertà de
 ## I miei servizi
 
 ### 1. Allenamento individuale
+
 Sessioni one-to-one per un'attenzione completamente dedicata ai tuoi obiettivi e alle tue esigenze. Massimizza i tuoi progressi con un programma su misura e feedback costante.
 
 ### 2. Allenamento di gruppo
+
 Condividi l'esperienza con amici o colleghi. Le sessioni di gruppo offrono motivazione reciproca e la possibilità di sfidare te stesso in un ambiente supportivo.
 
 ### 3. Classi specializzate
+
 Immergiti in workshop tematici focalizzati su discipline specifiche come primal movement, calisthenics o parkour. Perfette per approfondire tecniche avanzate e incontrare persone con interessi simili.
 
 ## Testimonianze
@@ -68,6 +71,7 @@ Seguimi sui social:
 3. Con Francesco Bernini, ogni sessione è un viaggio verso una versione più forte, agile e consapevole di te stesso.
 4. Supera i tuoi limiti, ridefinisci il tuo potenziale e scopri di cosa è davvero capace il tuo corpo.
 5. Dall'arte del movimento primordiale alla precisione del parkour: Francesco Bernini ti guida in un'esperienza di allenamento senza precedenti.
+
 # Domande Frequenti (FAQ)
 
 1. **Q: Che tipo di risultati posso aspettarmi dal tuo programma di allenamento?**

@@ -43,9 +43,10 @@
 		new Date().getMonth() === selectedMonth &&
 		new Date().getFullYear() === selectedYear;
 
-	$: filteredTrainings = selectedType && selectedType !== 'Tutti'
-		? trainings.filter((t) => t.type === selectedType)
-		: trainings;
+	$: filteredTrainings =
+		selectedType && selectedType !== 'Tutti'
+			? trainings.filter((t) => t.type === selectedType)
+			: trainings;
 </script>
 
 <div class="relative px-1 py-2 sm:py-3">

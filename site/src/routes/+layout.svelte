@@ -15,29 +15,9 @@
 
 <Seo />
 
-{#if $page.url.pathname == '/home'}
-	<div class="absolute bottom-0 top-0 block sm:hidden">
-		<img
-			alt="dd"
-			height="100%"
-			class="h-screen object-cover"
-			src={Images.HERO_HOME}
-			sizes="(max-width: 640px) 640px,(max-width: 960px) 960px,1280px"
-			loading="lazy"
-		/>
-	</div>
-{/if}
-
 <Navigation />
-<main class="layout">
+<main>
 	{@render children()}
 </main>
 
 <Footer />
-
-<style lang="postcss">
-	.layout {
-		@apply mx-auto w-full px-4 pb-6 sm:px-6 lg:px-8 xl:px-0;
-		max-width: min(100%, 80rem);
-	}
-</style>

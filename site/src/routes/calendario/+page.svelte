@@ -8,12 +8,7 @@
 	let selectedYear = new Date().getFullYear();
 	let selectedType: string | null = null;
 
-	const trainingTypes = [
-		'Tutti',
-		'Verticali',
-		'Movement',
-		'Parkour'
-	];
+	const trainingTypes = ['Tutti', 'Verticali', 'Movement', 'Parkour'];
 </script>
 
 <Seo

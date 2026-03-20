@@ -38,7 +38,8 @@
 		<div>
 			<h3 class="text-sm font-medium text-black">Telefono</h3>
 			<p class="mt-1">
-				<a href="tel:+39123456789" class="text-sm text-zinc-600 hover:text-black">+39 123 456 789</a>
+				<a href="tel:+39123456789" class="text-sm text-zinc-600 hover:text-black">+39 123 456 789</a
+				>
 			</p>
 		</div>
 	</div>

@@ -37,9 +37,7 @@
 		<div class="mt-6 flex justify-center gap-2">
 			{#each testimonials as _, i}
 				<button
-					class="h-2 w-2 rounded-full {currentTestimonial === i
-						? 'bg-black'
-						: 'bg-zinc-200'}"
+					class="h-2 w-2 rounded-full {currentTestimonial === i ? 'bg-black' : 'bg-zinc-200'}"
 					on:click={() => (currentTestimonial = i)}
 				>
 					<span class="sr-only">Testimonianza {i + 1}</span>

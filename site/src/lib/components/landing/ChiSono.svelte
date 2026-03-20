@@ -4,22 +4,32 @@
 	import Image from '../global/Image.svelte';
 </script>
 
-<section class="scroll-mt-12 py-16" id="about">
-	<div class="grid grid-cols-1 items-center gap-8 lg:grid-cols-2 lg:gap-12">
-		<div use:viewportAnimate={{ animation: 'slide-up', delay: 200 }} class="px-4 sm:px-6 lg:px-0">
-			<span
-				class="mb-4 inline-flex items-center rounded-full bg-zinc-100 px-3 py-1 text-sm text-zinc-800 lg:mb-6"
-				>La mia storia</span
-			>
-			<h2 class="text-3xl font-light tracking-tight text-black sm:text-4xl lg:text-5xl">
-				Movimento è <span class="font-medium">vita.</span>
-			</h2>
-			<div class="mt-4 flex flex-col gap-4 text-pretty text-base text-zinc-600 lg:mt-6">
+<section class="scroll-mt-12 overflow-hidden bg-surface py-32" id="about">
+	<div class="mx-auto grid max-w-screen-2xl grid-cols-1 items-center gap-24 px-8 lg:grid-cols-2">
+		<div
+			use:viewportAnimate={{ animation: 'fade', delay: 200 }}
+			class="relative order-2 lg:order-1"
+		>
+			<div class="editorial-shadow aspect-[4/5] overflow-hidden rounded-2xl">
+				<Image
+					src="/images/images/park-session-2.jpeg"
+					alt="Portrait of Francesco Bernini"
+					class="h-full w-full object-cover"
+				/>
+			</div>
+			<div
+				class="absolute -right-12 -top-12 -z-10 h-64 w-64 rounded-full bg-surface-container-low"
+			></div>
+		</div>
+
+		<div use:viewportAnimate={{ animation: 'slide-up', delay: 400 }} class="order-1 lg:order-2">
+			<h2 class="mb-10 font-headline text-4xl leading-tight md:text-6xl">Movimento è vita.</h2>
+			<div class="mb-12 space-y-6 text-lg leading-relaxed text-secondary">
 				<p>
 					Nell'ultimo decennio mi sono dedicato allo studio del movimento umano, imparando da
-					maestri come <span class="font-medium italic"> Will Brown</span>,
-					<span class="font-medium italic"> Nil Tiesner </span> e
-					<span class="font-medium italic">Harry Williams</span>.
+					maestri come <span class="italic">Will Brown</span>,
+					<span class="italic">Nil Tiesner</span> e
+					<span class="italic">Harry Williams</span>.
 				</p>
 				<p>
 					Ho approfondito pratiche fisiche molto differenti come verticalismo, acrobatica, forza e
@@ -27,26 +37,13 @@
 					relazione tra emozioni e movimento.
 				</p>
 			</div>
-			<div class="mt-6 lg:mt-8">
-				<a
-					href={Pages.ABOUT}
-					class="inline-flex items-center justify-center rounded-full border border-zinc-200 bg-white px-6 py-3 text-sm font-semibold text-zinc-900 transition-all hover:border-black hover:shadow-lg"
-				>
-					Scopri di più
-				</a>
-			</div>
-		</div>
-
-		<div
-			use:viewportAnimate={{ animation: 'fade', delay: 400 }}
-			class="relative aspect-[4/3] w-full overflow-hidden rounded-none bg-zinc-100 sm:aspect-[2/1] sm:rounded-3xl lg:aspect-auto lg:h-[600px]"
-		>
-			<Image
-				src="/images/images/park-session-2.jpeg"
-				alt="Movement training"
-				class="h-full w-full object-cover"
-			/>
-			<div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+			<a
+				href={Pages.ABOUT}
+				class="inline-flex items-center gap-4 border-b-2 border-primary-fixed-dim pb-1 font-medium text-primary transition-all hover:gap-6"
+			>
+				Scopri di più
+				<span class="material-symbols-outlined">east</span>
+			</a>
 		</div>
 	</div>
 </section>

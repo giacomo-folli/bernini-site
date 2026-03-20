@@ -20,54 +20,59 @@
 	];
 </script>
 
-<section bind:this={testimonialSection} class="relative overflow-hidden py-16">
-	<div class="mx-auto max-w-7xl">
-		<div class="mx-auto max-w-2xl lg:max-w-4xl">
-			<span
-				use:viewportAnimate={{ animation: 'fade' }}
-				class="mb-6 inline-flex items-center rounded-full bg-zinc-100 px-3 py-1 text-sm text-zinc-800"
-			>
-				Testimonianze
-			</span>
-
+<section bind:this={testimonialSection} class="bg-surface-container-low py-32">
+	<div class="mx-auto max-w-screen-xl px-8">
+		<div
+			class="editorial-shadow relative overflow-hidden rounded-3xl bg-surface-container-lowest p-12 md:p-20"
+		>
 			{#each testimonials as testimonial, i}
 				{#if testimonialActive === i + 1}
-					<div use:viewportAnimate={{ animation: 'slide-up' }} class="text-center">
-						<figure>
-							<blockquote class="text-2xl font-light italic leading-relaxed text-black sm:text-3xl">
-								<p>"{testimonial.text}"</p>
-							</blockquote>
-							<figcaption class="mt-10">
-								<img
-									class="mx-auto h-16 w-16 rounded-full object-cover"
-									src={testimonial.image}
-									alt={testimonial.author}
-								/>
-								<div class="mt-4">
-									<div class="text-lg font-semibold text-black">{testimonial.author}</div>
-									<div class="text-base text-zinc-600">{testimonial.role}</div>
-								</div>
-							</figcaption>
-						</figure>
+					<div
+						use:viewportAnimate={{ animation: 'slide-up' }}
+						class="relative z-10 flex flex-col items-center gap-12 md:flex-row"
+					>
+						<div class="h-32 w-32 shrink-0 overflow-hidden rounded-full border-4 border-surface">
+							<img
+								class="h-full w-full object-cover"
+								src={testimonial.image}
+								alt={testimonial.author}
+							/>
+						</div>
+						<div>
+							<p class="mb-8 font-headline text-2xl italic leading-relaxed md:text-3xl">
+								"{testimonial.text}"
+							</p>
+							<div>
+								<h4 class="font-bold text-on-surface">{testimonial.author}</h4>
+								<p class="text-sm text-primary">{testimonial.role}</p>
+							</div>
+						</div>
 					</div>
 				{/if}
 			{/each}
 
 			<div
 				use:viewportAnimate={{ animation: 'fade', delay: 300 }}
-				class="mt-10 flex justify-center gap-4"
+				class="relative z-20 mt-10 flex justify-center gap-4"
 			>
 				{#each testimonials as _, i}
 					<button
 						on:click={() => (testimonialActive = i + 1)}
 						class="h-3 w-3 rounded-full transition-all {testimonialActive === i + 1
-							? 'bg-black'
-							: 'bg-zinc-200 hover:bg-zinc-300'}"
+							? 'bg-primary'
+							: 'hover:bg-outline bg-outline-variant'}"
 					>
 						<span class="sr-only">Testimonianza {i + 1}</span>
 					</button>
 				{/each}
 			</div>
+
+			<span
+				class="material-symbols-outlined text-surface-container pointer-events-none absolute -bottom-10 -right-10 text-[200px] opacity-20"
+				style="font-variation-settings: 'FILL' 1;"
+			>
+				format_quote
+			</span>
 		</div>
 	</div>
 </section>

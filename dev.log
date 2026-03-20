@@ -1,0 +1,70 @@
+
+> not-final@0.0.1 dev
+> vite dev
+
+Forced re-optimization of dependencies
+
+  VITE v5.4.19  ready in 1702 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+Browserslist: browsers data (caniuse-lite) is 13 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+6:52:15 PM [vite-plugin-svelte] src/lib/components/global/Footer.svelte:15:5 '#' is not a valid href attribute
+https://svelte.dev/e/a11y_invalid_attribute
+6:52:15 PM [vite-plugin-svelte] src/lib/components/global/Footer.svelte:19:5 '#' is not a valid href attribute
+https://svelte.dev/e/a11y_invalid_attribute
+6:52:15 PM [vite-plugin-svelte] src/lib/components/global/Footer.svelte:23:5 '#' is not a valid href attribute
+https://svelte.dev/e/a11y_invalid_attribute
+6:52:16 PM [vite] ✨ new dependencies optimized: clsx, motion
+6:52:16 PM [vite] ✨ optimized dependencies changed. reloading
+6:52:17 PM [vite-plugin-svelte] src/lib/components/global/Footer.svelte:15:5 '#' is not a valid href attribute
+https://svelte.dev/e/a11y_invalid_attribute
+6:52:17 PM [vite-plugin-svelte] src/lib/components/global/Footer.svelte:19:5 '#' is not a valid href attribute
+https://svelte.dev/e/a11y_invalid_attribute
+6:52:17 PM [vite-plugin-svelte] src/lib/components/global/Footer.svelte:23:5 '#' is not a valid href attribute
+https://svelte.dev/e/a11y_invalid_attribute
+7:01:05 PM [vite] page reload .svelte-kit/generated/client/nodes/0.js
+7:01:05 PM [vite] page reload .svelte-kit/generated/client/nodes/1.js
+7:01:05 PM [vite] page reload .svelte-kit/generated/client/nodes/7.js
+7:01:05 PM [vite] page reload .svelte-kit/generated/client/app.js
+7:01:05 PM [vite] page reload .svelte-kit/generated/client/matchers.js
+7:01:05 PM [vite] page reload .svelte-kit/generated/server/internal.js
+7:01:05 PM [vite] page reload .svelte-kit/generated/root.js
+7:03:22 PM [vite] page reload .svelte-kit/generated/client/nodes/0.js
+7:03:22 PM [vite] page reload .svelte-kit/generated/client/nodes/1.js
+7:03:22 PM [vite] page reload .svelte-kit/generated/client/nodes/7.js
+7:03:22 PM [vite] page reload .svelte-kit/generated/client/app.js
+7:03:22 PM [vite] page reload .svelte-kit/generated/client/matchers.js
+7:03:22 PM [vite] page reload .svelte-kit/generated/server/internal.js
+7:03:22 PM [vite] page reload .svelte-kit/generated/root.js
+7:04:45 PM [vite] page reload .svelte-kit/generated/client/nodes/1.js
+7:04:45 PM [vite] page reload .svelte-kit/generated/client/nodes/0.js
+7:04:45 PM [vite] page reload .svelte-kit/generated/client/nodes/7.js
+7:04:45 PM [vite] page reload .svelte-kit/generated/client/app.js
+7:04:45 PM [vite] page reload .svelte-kit/generated/client/matchers.js
+7:04:45 PM [vite] page reload .svelte-kit/generated/server/internal.js
+7:04:45 PM [vite] page reload .svelte-kit/generated/root.js
+7:09:54 PM [vite] page reload .svelte-kit/generated/client/nodes/0.js
+7:09:54 PM [vite] page reload .svelte-kit/generated/client/nodes/1.js
+7:09:54 PM [vite] page reload .svelte-kit/generated/client/nodes/7.js
+7:09:54 PM [vite] page reload .svelte-kit/generated/client/app.js
+7:09:54 PM [vite] page reload .svelte-kit/generated/client/matchers.js
+7:09:54 PM [vite] page reload .svelte-kit/generated/server/internal.js
+7:09:54 PM [vite] page reload .svelte-kit/generated/root.js
+7:10:32 PM [vite] hmr update /src/lib/components/global/Footer.svelte, /src/app.css
+7:10:38 PM [vite] page reload .svelte-kit/generated/client/nodes/0.js
+7:10:38 PM [vite] page reload .svelte-kit/generated/client/nodes/1.js
+7:10:38 PM [vite] page reload .svelte-kit/generated/client/nodes/7.js
+7:10:38 PM [vite] page reload .svelte-kit/generated/client/matchers.js
+7:10:38 PM [vite] page reload .svelte-kit/generated/client/app.js
+7:10:38 PM [vite] page reload .svelte-kit/generated/server/internal.js
+7:10:38 PM [vite] page reload .svelte-kit/generated/root.js
+7:11:02 PM [vite] page reload .svelte-kit/generated/client/nodes/0.js
+7:11:02 PM [vite] page reload .svelte-kit/generated/client/nodes/1.js
+7:11:02 PM [vite] page reload .svelte-kit/generated/client/nodes/7.js
+7:11:02 PM [vite] page reload .svelte-kit/generated/client/app.js
+7:11:02 PM [vite] page reload .svelte-kit/generated/client/matchers.js
+7:11:02 PM [vite] page reload .svelte-kit/generated/server/internal.js
+7:11:02 PM [vite] page reload .svelte-kit/generated/root.js

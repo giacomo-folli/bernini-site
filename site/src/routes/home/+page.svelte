@@ -16,35 +16,11 @@
 />
 
 <Page id="home">
-	<div class="mb-4 mt-36 sm:mt-0">
-		<Hero />
-	</div>
-
-	<div class="border-t border-zinc-200"></div>
-
+	<Hero />
 	<CourseSlider />
-
-	<div class="border-t border-zinc-200"></div>
-
-	<div class="-mx-4 sm:-mx-6 lg:-mx-10">
-		<Slogan />
-	</div>
-
-	<div class="border-t border-zinc-200"></div>
-
+	<Slogan />
 	<ChiSono />
-
-	<div class="border-t border-zinc-200"></div>
-
 	<LogoCloud />
-
-	<div class="border-t border-zinc-200"></div>
-
 	<Testimonials />
-
-	<div class="border-t border-zinc-200"></div>
-
-	<div class="py-16">
-		<Cta />
-	</div>
+	<Cta />
 </Page>
